@@ -142,7 +142,7 @@
     @stack('modals')
 
     @livewireScripts
-    {{ $scripts ?? '' }}
+    {{ $script ?? '' }}
 </body>
 
 </html>
