@@ -4,6 +4,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,10 +21,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 
 Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('dashboard')->group(function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('index');
-    
-    Route::middleware(['admin'])->group(function () {
-        Route::resource('buku', BukuController::class);
-        Route::resource('member', MemberController::class);
-    });
+        Route::get('/', [DashboardController::class, 'index'])->name('index');
+
+        Route::middleware(['admin'])->group(function () {
+                Route::resource('buku', BukuController::class);
+                Route::resource('member', MemberController::class);
+                Route::resource('transaksi', TransaksiController::class);
+        });
 });

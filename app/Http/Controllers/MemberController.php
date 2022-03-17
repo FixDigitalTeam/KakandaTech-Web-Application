@@ -16,7 +16,7 @@ class MemberController extends Controller
     public function index()
     {
         $member = Member::latest()->paginate(5);
-        return view ('pages.dashboard.member.index', compact('member'))->with('i', (request()->input('page', 1) -1) * 5);
+        return view('pages.dashboard.member.index', compact('member'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -47,7 +47,7 @@ class MemberController extends Controller
         ]);
         member::create($request->all());
 
-        return redirect()->route('pages.dashboard.member.index')->with('succes','Data Berhasil di Input');
+        return redirect()->route('dashboard.member.index')->with('succes', 'Data Berhasil di Input');
     }
 
     /**
@@ -90,7 +90,7 @@ class MemberController extends Controller
 
         $member->update($request->all());
 
-        return redirect()->route('pages.dashboard.member.index')->with('succes','member Berhasil di Update');
+        return redirect()->route('pages.dashboard.member.index')->with('succes', 'member Berhasil di Update');
     }
 
     /**
@@ -102,6 +102,6 @@ class MemberController extends Controller
     public function destroy(Member $member)
     {
         $member->delete();
-        return redirect()->route('pages.dashboard.member.index')->with('succes','member Berhasil di Hapus');
+        return redirect()->route('pages.dashboard.member.index')->with('succes', 'member Berhasil di Hapus');
     }
 }

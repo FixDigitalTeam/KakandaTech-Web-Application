@@ -1,7 +1,7 @@
 <x-app-layout>
   <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-      {{ __('Member Pepustakaan') }}
+      {{ __('Buku') }}
     </h2>
   </x-slot>
 
@@ -9,16 +9,17 @@
     <script>
       //DataTable
 
-      var datatable = $('#membertable').DataTable({
+      var datatable = $('#bukuTable').DataTable({
         ajax: {
             url: '{!! url()->current() !!}'
                 },
                 columns: [
-                    { data: 'kodereg', name: 'kodereg', width:'10%' },
-                    { data: 'namamember', name: 'namamember' },
-                    { data: 'jeniskelamin', name: 'jeniskelamin'},
-                    { data: 'alamat', name: 'alamat' },
-                    { data: 'nomorhp', name: 'nomorhp' },
+                    { data: 'id', name: 'id', width:'10%' },
+                    { data: 'judul', name: 'judul' },
+                    { data: 'pengarang', name: 'pengarang'},
+                    { data: 'penerbit', name: 'penerbit' },
+                    { data: 'tahun_terbit', name: 'tahun_terbit' },
+                    { data: 'stock', name: 'stock' },
                     {
                         data: 'action',
                         name: 'action',
@@ -35,19 +36,21 @@
   <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div class=" mb-10">
-        <a href="{{ route('dashboard.member.create') }}"
-          class="bg-blue-300 hover:bg-blue-500 text-white font-bold py-3 px-6  shadow-md">Input Member Baru</a>
+        <a href="{{ route('dashboard.transaksi.create') }}"
+          class="bg-blue-300 hover:bg-blue-500 text-white font-bold py-3 px-6  shadow-md">Input Buku</a>
       </div>
       <div class="shadow overflow-hidden sm-rounded-md">
         <div class="px-4 py-5 bg-white sm:p-6">
-          <table id="membertable">
+          <table id="bukuTable">
             <thead>
               <tr>
-                <th>Kode REG</th>
-                <th>Nama Member</th>
-                <th>Jenis Kelamin</th>
-                <th>Alamat</th>
-                <th>Nomor Hp</th>
+                <th>ID</th>
+                <th>Judul</th>
+                <th>Pengarang</th>
+                <th>Penerbit</th>
+                <th>Tahun Terbit</th>
+                <th>Stock</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody></tbody>

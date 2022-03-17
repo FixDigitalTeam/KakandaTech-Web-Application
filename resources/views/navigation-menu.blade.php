@@ -168,6 +168,10 @@
                 {{ __('dashboard.index') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('dashboard.index') }}"
+                :active="request()->routeIs('dashboard.member.index')">
+                {{ __('dashboard.member.index') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('dashboard.index') }}"
                 :active="request()->routeIs('dashboard.buku.index')">
                 {{ __('dashboard.buku.index') }}
             </x-jet-responsive-nav-link>
