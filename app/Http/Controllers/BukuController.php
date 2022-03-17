@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BukuRequest;
 use App\Models\Buku;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -18,6 +19,20 @@ class BukuController extends Controller
         if (request()->ajax()) {
             $query = Buku::query();
             return DataTables::of($query)
+                ->addColumn('action', function ($buku) {
+                    return '
+                    <a href="' . route('dashboard.buku.edit', $buku->id) . '" class="bg-blue-400 hover:bg-blue-500 text-white rounded-md px-4 py-1 md-2 inline-block">
+                    Update
+                    </a>
+                    <form class="inline-block" action="' . route('dashboard.buku.destroy', $buku->id) . '" method="POST">
+                        <button class="bg-red-400 hover:bg-red-500 text-white rounded-md px-4 py-1 md-2">
+                            Delete
+                        </button>
+                    ' . method_field('delete') . csrf_field() . '
+                    </form>
+                    ';
+                })
+                ->rawColumns(['action'])
                 ->make();
         }
         return view('pages.dashboard.buku.index');
@@ -39,9 +54,12 @@ class BukuController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BukuRequest $request)
     {
-        //
+        $data = $request->all();
+
+        Buku::create($data);
+        return redirect()->route('dashboard.buku.index');
     }
 
     /**
@@ -61,9 +79,11 @@ class BukuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Buku $buku)
     {
-        //
+        return view('pages.dashboard.buku.update', [
+            'buku' => $buku
+        ]);
     }
 
     /**
@@ -73,9 +93,13 @@ class BukuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BukuRequest $request, Buku $buku)
     {
-        //
+        $data = $request->all();
+
+        $buku->update($data);
+
+        return redirect()->route('dashboard.buku.index');
     }
 
     /**
@@ -84,8 +108,10 @@ class BukuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Buku $buku)
     {
-        //
+        $buku->delete();
+
+        return redirect()->route('dashboard.buku.index');
     }
 }

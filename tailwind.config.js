@@ -1,3 +1,4 @@
+const { colors } = require('laravel-mix/src/Log');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -6,6 +7,7 @@ module.exports = {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './app/Http/Controllers/**/*',
     ],
 
     theme: {

@@ -9,7 +9,7 @@
     <script>
       //DataTable
 
-      var datatable = $('#crudTable').DataTable({
+      var datatable = $('#bukuTable').DataTable({
         ajax: {
             url: '{!! url()->current() !!}'
                 },
@@ -25,7 +25,7 @@
                         name: 'action',
                         orderable: false,
                         searchable: false,
-                        width: '20%'
+                        width: '25%'
                     }
                     
                 ]
@@ -37,11 +37,11 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div class=" mb-10">
         <a href="{{ route('dashboard.buku.create') }}"
-          class="bg-amber-300 hover:bg-amber-600 text-white font-bold py-3 px-6  shadow-md">Input Buku</a>
+          class="bg-blue-300 hover:bg-blue-500 text-white font-bold py-3 px-6  shadow-md">Input Buku</a>
       </div>
       <div class="shadow overflow-hidden sm-rounded-md">
         <div class="px-4 py-5 bg-white sm:p-6">
-          <table id="crudTable">
+          <table id="bukuTable">
             <thead>
               <tr>
                 <th>ID</th>
