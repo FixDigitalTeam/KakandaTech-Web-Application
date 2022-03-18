@@ -9,10 +9,7 @@ class Member extends Model
 {
    use HasFactory;
 
-   protected $table = 'members';
-   protected $primaryKey = 'kodereg';
-
    protected $fillable = [
-      'namamember', 'jeniskelamin', 'alamat', 'nomorhp'
+      'nama_member', 'jenis_kelamin', 'alamat', 'nomor_hp'
    ];
 }

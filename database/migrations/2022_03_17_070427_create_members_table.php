@@ -14,11 +14,13 @@ class CreateMembersTable extends Migration
     public function up()
     {
         Schema::create('members', function (Blueprint $table) {
-            $table->increments('kodereg');
-            $table->String('namamember', 40);
-            $table->String('jeniskelamin', 9);
+            $table->id();
+
+            $table->String('nama_member');
+            $table->String('jenis_kelamin');
             $table->text('alamat');
-            $table->String('nomorhp', 13);
+            $table->String('nomor_hp');
+
             $table->timestamps();
         });
     }

@@ -14,11 +14,11 @@
             url: '{!! url()->current() !!}'
                 },
                 columns: [
-                    { data: 'kodereg', name: 'kodereg', width:'10%' },
-                    { data: 'namamember', name: 'namamember' },
-                    { data: 'jeniskelamin', name: 'jeniskelamin'},
+                    { data: 'id', name: 'id', width:'10%' },
+                    { data: 'nama_member', name: 'nama_member' },
+                    { data: 'jenis_kelamin', name: 'jenis_kelamin'},
                     { data: 'alamat', name: 'alamat' },
-                    { data: 'nomorhp', name: 'nomorhp' },
+                    { data: 'nomor_hp', name: 'nomor_hp' },
                     {
                         data: 'action',
                         name: 'action',
@@ -43,11 +43,12 @@
           <table id="membertable">
             <thead>
               <tr>
-                <th>Kode REG</th>
+                <th>ID</th>
                 <th>Nama Member</th>
                 <th>Jenis Kelamin</th>
                 <th>Alamat</th>
                 <th>Nomor Hp</th>
+                <th>Aksi</th>
               </tr>
             </thead>
             <tbody></tbody>
