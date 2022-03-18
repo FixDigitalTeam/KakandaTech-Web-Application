@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Member;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Yajra\DataTables\Facades\DataTables;
 
 class MemberController extends Controller
 {
@@ -15,8 +16,28 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $member = Member::latest()->paginate(5);
-        return view('pages.dashboard.member.index', compact('member'))->with('i', (request()->input('page', 1) - 1) * 5);
+        // $member = Member::latest()->paginate(5);
+        // return view('pages.dashboard.member.index', compact('member'))->with('i', (request()->input('page', 1) - 1) * 5);
+        if (request()->ajax()) {
+            $query = Member::query();
+            return DataTables::of($query)
+            ->addColumn('action', function ($member) {
+                return '
+                    <a href="' . route('dashboard.member.edit', $member->kodereg) . '" class="bg-blue-400 hover:bg-blue-500 text-white rounded-md px-4 py-1 md-2 inline-block">
+                    Update
+                    </a>
+                    <form class="inline-block" action="' . route('dashboard.member.destroy', $member->kodereg) . '" method="POST">
+                        <button class="bg-red-400 hover:bg-red-500 text-white rounded-md px-4 py-1 md-2">
+                            Delete
+                        </button>
+                    ' . method_field('delete') . csrf_field() . '
+                    </form>
+                    ';
+            })
+                ->rawColumns(['action'])
+                ->make();
+        }
+        return view('pages.dashboard.member.index');
     }
 
     /**

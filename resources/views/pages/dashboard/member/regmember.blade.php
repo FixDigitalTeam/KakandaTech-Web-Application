@@ -20,7 +20,7 @@
       </div>
       @endif
 
-      <form action="{{ route('dashboard.member.store') }}" method="post" class="w-full">
+      <form action="{{ route('dashboard.member.store') }}" method="post" class="w-full" autocomplete="off">
          @csrf
          <div class="flex flex-wrap -mx-3 mb-2">
          <div class="w-full px-3">
@@ -29,52 +29,46 @@
             </label>
             <input
                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-               id="namamember" name="namamember" type="text" value="{{ old('namamember') }}" placeholder="namamember">
+               id="namamember" name="namamember" type="text" value="{{ old('namamember') }}" placeholder="Masukkan nama lengkap">
          </div>
          </div>
          <div class="flex flex-wrap -mx-3 mb-2">
          <div class="w-full px-3">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="jeniskelamin">
-               Pengarang
+               Jenis Kelamin
             </label>
-            <select name="jeniskelamin" class=""></select>
+            <select name="jeniskelamin" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+               <option value="">- Pilih jenis kelamin -</option>
+               <option value="Laki-laki">Laki-laki</option>
+               <option value="Perempuan">Perempuan</option>
+            </select>
          </div>
          </div>
          <div class="flex flex-wrap -mx-3 mb-2">
          <div class="w-full px-3">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="penerbit">
-               Penerbit
+               Alamat Tempat Tinggal
             </label>
-            <input
+            <textarea
                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-               id="penerbit" name="penerbit" type="text" value="{{ old('penerbit') }}" placeholder="Penerbit">
+               id="alamat" name="alamat" type="text" value="{{ old('alamat') }}" placeholder="Masukkan alamat lengkap"></textarea>
          </div>
          </div>
          <div class="flex flex-wrap -mx-3 mb-2">
          <div class="w-full px-3">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="tahun">
-               Tahun Terbit
+               Nomor HP
             </label>
             <input
                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-               id="tahun" name="tahun_terbit" type="text" value="{{ old('tahun_terbit') }}" placeholder="Tahun Terbit">
-         </div>
-         </div>
-         <div class="flex flex-wrap -mx-3 mb-2">
-         <div class="w-full px-3">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="stok">
-               Stok
-            </label>
-            <input
-               class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-               id="stok" name="stock" type="text" value="{{ old('stock') }}" placeholder="Stok">
+               id="tahun" name="nomorhp" type="text" value="{{ old('nomorhp') }}" placeholder="Masukkan nomor hp">
          </div>
          </div>
          <div class="flex flex-wrap -mx-3 mb-6">
          <div class="flex justify-end w-full px-3">
             <button type="submit"
                class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow-md">
-               Simpan
+               Simpan data
             </button>
          </div>
          </div>
