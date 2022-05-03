@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServicesTable extends Migration
+class AddLevelToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->id();
-            $table->string('NamaLay', 25);
-            $table->bigInteger('KodeKgr');
-            $table->bigInteger('Harga');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('level')->after('password')->default('user');
         });
     }
 
@@ -29,6 +25,8 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServicesTable extends Migration
+class CreateCancelOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('cancel_orders', function (Blueprint $table) {
             $table->id();
-            $table->string('NamaLay', 25);
-            $table->bigInteger('KodeKgr');
-            $table->bigInteger('Harga');
+            $table->bigInteger('KodeTrx');
+            $table->bigInteger('Refund');
+            $table->string('Status')->default('Pending');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('cancel_orders');
     }
 }
