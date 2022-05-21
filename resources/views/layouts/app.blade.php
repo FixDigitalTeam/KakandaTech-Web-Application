@@ -27,6 +27,7 @@
       <!-- End of Main Content -->
       @include('includes.backend.footer')
     </div>
+
     <!-- End of Content Wrapper -->
   </div>
   <!-- End of Page Wrapper -->
