@@ -20,18 +20,42 @@ class UserController extends Controller
         return DataTables::of(User::query())
         ->addColumn('action', function($user) {
             return '
-            <a href="' . route('dashboard.user.edit', $user->id) . '">
-                Edit
+            <a class="btn btn-warning" href="' . route('dashboard.user.edit', $user->id) . '">
+                <i class="fa-solid fa-pencil"></i>
             </a>
-            <a href="home">
-                Delete
+            <a class="btn btn-danger" href="' . route('dashboard.user.destroy', $user->id) . '" data-toggle="modal" data-target="#deleteModal'. $user->id .'">
+                <i class="fa-solid fa-trash"></i>
             </a>
+            <!-- Logout Modal-->
+            <div class="modal fade" id="deleteModal'. $user->id . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Confirmation</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">Confirm to delete '.$user->name . ' ?</div>
+                    <div class="modal-footer">
+                    <form method="POST" action="' . route('dashboard.user.destroy', $user->id) . '">
+                        <button class=" btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                        '. method_field('delete') . csrf_field() .'
+                    </form>
+                    </div>
+                </div>
+                </div>
+            </div>
             ';
         })
         ->rawColumns(['action'])
         ->make();
         }
-        return view('pages.backend.user.index');
+        return view('pages.backend.user.index', [
+            'head' => 'User'
+        ]);
     }
     /**
      * Show the form for creating a new resource.
@@ -74,6 +98,7 @@ class UserController extends Controller
     public function edit(User $user)
     {
         return view('pages.backend.user.edit', [
+            'head' => 'Edit User',
             'user' => $user
         ]);
     }
@@ -89,7 +114,7 @@ class UserController extends Controller
     {
         $data = $request->all();
         $user->update($data);
-        return redirect()->route('dashboard.user.index');
+        return redirect()->route('dashboard.user.index')->with('success', 'User Update Successfully');
     }
 
     /**
@@ -98,8 +123,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('dashboard.user.index')->with('success', 'Delete User Successfully');
     }
 }
