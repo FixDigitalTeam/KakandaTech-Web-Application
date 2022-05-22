@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Dashboard</title>
+  <title>KakandaTech | {{ $head }}</title>
   @include('includes.backend.style')
 </head>
 

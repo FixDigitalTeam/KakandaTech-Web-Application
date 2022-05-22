@@ -19,3 +19,8 @@
 <script src="{{ url('backend/vendor/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ url('backend/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ url('backend/js/demo/datatables-demo.js') }}"></script>
+
+<!-- Online Script -->
+<script src="https://cdn.ckeditor.com/4.17.2/standard/ckeditor.js"></script>
+<script src="https://kit.fontawesome.com/c552497325.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
