@@ -18,6 +18,12 @@
 
   @if (Auth::user()->roles == 'ADMIN')
 
+  <li class="nav-item {{ $head === 'Package' ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('dashboard.package.index') }}">
+      <i class="fas fa-fw fa-user"></i>
+      <span>Package</span></a>
+  </li>
+
   <li class="nav-item {{ $head === 'Blog' ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('dashboard.blog.index') }}">
       <i class="fas fa-fw fa-book"></i>
@@ -28,6 +34,12 @@
     <a class="nav-link" href="{{ route('dashboard.user.index') }}">
       <i class="fas fa-fw fa-user"></i>
       <span>User</span></a>
+  </li>
+
+  <li class="nav-item {{ $head === 'Product' ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('dashboard.product.index') }}">
+      <i class="fas fa-fw fa-box"></i>
+      <span>Product</span></a>
   </li>
 
   @endif

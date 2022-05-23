@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PackageController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -25,6 +27,8 @@ Route::middleware(['auth'])->name('dashboard.')->prefix('dashboard')->group(func
     Route::get('/', [DashboardController::class, 'index'])->name('index');
     Route::resource('user', UserController::class);
     Route::resource('blog', BlogController::class);
+    Route::resource('package', PackageController::class);
+    Route::resource('product', ProductController::class);
 
     Route::middleware(['admin'])->group(function () {
         

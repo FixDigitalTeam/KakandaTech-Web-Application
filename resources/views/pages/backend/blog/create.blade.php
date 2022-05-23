@@ -48,7 +48,3 @@
           });
 </script>
 @endpush
-
-@push('toastr')
-
-@endpush
