@@ -7,17 +7,17 @@
   <!-- Page Heading -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Update Content</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Update {{ $blog->title }}</h6>
     </div>
     <div class="card-body">
       <form action="{{ route('dashboard.blog.update', $blog->id_post)   }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        <div class="mb-3">
+        <div class="form-group">
           <label for="title" class="form-label">Title</label>
           <input type="text" class="form-control" name="title" id="title" value="{{ old('title') ?? $blog->title }}">
         </div>
-        <div class="mb-3">
+        <div class="form-group">
           <label for="content" class="form-label">Content</label>
           <textarea class="form-control" name="content" id="contentBlog">
             {!! old('content') ?? $blog->content !!}

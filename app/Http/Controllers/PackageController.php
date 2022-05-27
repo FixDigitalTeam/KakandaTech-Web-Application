@@ -94,8 +94,10 @@ class PackageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Package $package)
+    public function show($id)
     {
+        $package = Package::with(['product'])->findOrFail($id);
+        
         return view('pages.backend.package.view', [
             'head' => 'View Content',
             'package' => $package

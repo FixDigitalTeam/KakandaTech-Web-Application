@@ -3,6 +3,9 @@
 
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard.index') }}">
+    <div class="sidebar-brand-icon">
+      <i class="fa-solid fa-laptop-code"></i>
+    </div>
     <div class="sidebar-brand-text mx-3">Kakanda Tech</div>
   </a>
 

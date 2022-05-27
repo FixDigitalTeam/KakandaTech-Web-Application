@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Yajra\DataTables\Facades\DataTables;
 
 class ProductController extends Controller
@@ -17,6 +18,9 @@ class ProductController extends Controller
     {
         if ($request->ajax()) {
         return DataTables::of(Product::query())
+        ->editColumn('created_at', function ($product) {
+            return Carbon::parse($product->created_at)->format('F n, Y');
+        })
         ->toJson();
         }
         return view('pages.backend.product.index', [

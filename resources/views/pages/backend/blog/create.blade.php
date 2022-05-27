@@ -12,11 +12,11 @@
     <div class="card-body">
       <form action="{{ route('dashboard.blog.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="mb-3">
+        <div class="form-group">
           <label for="title" class="form-label">Title</label>
           <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}">
         </div>
-        <div class="mb-3">
+        <div class="form-group">
           <label for="content" class="form-label">Content</label>
           <textarea class="form-control" name="content" id="contentBlog">
             {!! old('content') !!}

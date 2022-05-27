@@ -46,7 +46,7 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">Are you sure want to Logout ?</div>
         <div class="modal-footer">
           <form method="POST" action="{{ route('logout') }}">
             @csrf

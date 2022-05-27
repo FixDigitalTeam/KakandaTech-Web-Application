@@ -10,7 +10,7 @@
   <!-- Page Heading -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Content Information</h6>
+      <h6 class="m-0 font-weight-bold text-primary">{{ $blog->title }} Information </h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -29,12 +29,8 @@
               <td>{{ $blog->content }}</td>
             </tr>
             <tr>
-              <td>Created At</td>
-              <td>{{ $blog->created_at }}</td>
-            </tr>
-            <tr>
-              <td>Updated At</td>
-              <td>{{ $blog->updated_at }}</td>
+              <td>Post</td>
+              <td>{{ \Carbon\Carbon::create($blog->created_at)->format('F n, Y') }}</td>
             </tr>
           </tbody>
         </table>

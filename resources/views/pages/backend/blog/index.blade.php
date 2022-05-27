@@ -6,15 +6,15 @@
 <div class="container-fluid">
 
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Blog Data</h1>
-  <a class="btn btn-primary mb-3" href="{{ route('dashboard.blog.create') }}">
-    <i class="fa-solid fa-plus"></i> Create New Content
+  <h1 class="h3 mb-2 text-gray-800">Blog Management</h1>
+  <a class="btn btn-primary shadow-md mb-3" href="{{ route('dashboard.blog.create') }}">
+    <i class="fa-solid fa-plus"></i> Create Content
   </a>
 
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Blog Information</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Content Information</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">

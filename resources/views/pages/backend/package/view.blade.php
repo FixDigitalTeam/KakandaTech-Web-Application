@@ -10,7 +10,7 @@
   <!-- Page Heading -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Package Information</h6>
+      <h6 class="m-0 font-weight-bold text-primary">{{ $package->nama_package }} Information </h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -58,7 +58,7 @@
             </tr>
             <tr>
               <td>Product</td>
-              <td>{{ $package->id_product }}</td>
+              <td>{{ $package->product->nama_product }}</td>
             </tr>
             <tr>
               <td>Harga</td>

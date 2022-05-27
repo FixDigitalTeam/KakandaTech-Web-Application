@@ -6,9 +6,9 @@
 <div class="container-fluid">
 
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Package Data</h1>
+  <h1 class="h3 mb-2 text-gray-800">Package Management</h1>
   <a class="btn btn-primary mb-3" href="{{ route('dashboard.package.create') }}">
-    <i class="fa-solid fa-plus"></i> Create New Package
+    <i class="fa-solid fa-plus"></i> Create Package
   </a>
 
   <!-- DataTales Example -->
