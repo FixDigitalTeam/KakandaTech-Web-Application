@@ -13,7 +13,7 @@ class Package extends Model
     protected $primaryKey = 'id_package';
 
     protected $fillable = [
-        'nama_package', 'harga', 'deskripsi', 'keuntungan_1', 'keuntungan_2',
+        'nama_package', 'slug', 'harga', 'deskripsi', 'keuntungan_1', 'keuntungan_2',
         'keuntungan_3','keuntungan_4','keuntungan_5','keuntungan_6','keuntungan_7',
         'keuntungan_8', 'waktu_pengerjaan', 'id_product'
     ];
@@ -21,5 +21,10 @@ class Package extends Model
     public function product() 
     {
         return $this->belongsTo(Product::class, 'id_product', 'id_product');
+    }
+
+    public function transaction()
+    {
+        return $this->hasOne(Transaction::class, 'id_package', 'id_package');
     }
 }

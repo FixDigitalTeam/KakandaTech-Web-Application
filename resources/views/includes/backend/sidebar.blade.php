@@ -13,13 +13,14 @@
   <hr class="sidebar-divider my-0">
 
   <!-- Nav Item - Dashboard -->
+
+  @if (Auth::user()->roles == 'ADMIN')
+
   <li class="nav-item {{ $head === 'Dashboard' ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('dashboard.index') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
-
-  @if (Auth::user()->roles == 'ADMIN')
 
   <li class="nav-item {{ $head === 'Package' ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('dashboard.package.index') }}">
@@ -31,6 +32,12 @@
     <a class="nav-link" href="{{ route('dashboard.blog.index') }}">
       <i class="fas fa-fw fa-book"></i>
       <span>Blog</span></a>
+  </li>
+
+  <li class="nav-item {{ $head === 'Transaction' ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('dashboard.transaction.index') }}">
+      <i class="fas fa-fw fa-book"></i>
+      <span>Transaction</span></a>
   </li>
 
   <li class="nav-item {{ $head === 'User' ? 'active' : '' }}">
@@ -47,6 +54,17 @@
 
   @endif
 
+  <li class="nav-item {{ $head === 'My Progress' ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('dashboard.myprogress') }}">
+      <i class="fas fa-fw fa-spinner"></i>
+      <span>My Progress</span></a>
+  </li>
+
+  <li class="nav-item {{ $head === 'My Transaction' ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('dashboard.mytransaction') }}">
+      <i class="fas fa-fw fa-dollar"></i>
+      <span>My Transaction</span></a>
+  </li>
 
   <!-- Divider -->
   <hr class="sidebar-divider">

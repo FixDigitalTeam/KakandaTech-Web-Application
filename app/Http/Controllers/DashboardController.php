@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     public function index(Request $request)
     {
-        return view('dashboard',[
+        return view('pages.backend.dashboard.dashboard',[
             'head' => 'Dashboard'
         ]);
     }

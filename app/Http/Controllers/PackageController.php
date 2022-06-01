@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Package;
 use App\Models\Product;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Requests\PackageRequest;
 use Yajra\DataTables\Facades\DataTables;
@@ -84,6 +85,8 @@ class PackageController extends Controller
     public function store(PackageRequest $request)
     {
         $data = $request->all();
+        $data['slug'] = Str::slug($request->nama_package); 
+
         Package::create($data);
         return redirect()->route('dashboard.package.index')->with('success', 'Package Create Successfully');
     }
@@ -113,6 +116,7 @@ class PackageController extends Controller
     public function edit(Package $package)
     {
         $product = Product::get();
+        
         return view('pages.backend.package.edit', [
             'head' => 'Edit Package',
             'package' => $package
@@ -129,6 +133,8 @@ class PackageController extends Controller
     public function update(PackageRequest $request, Package $package)
     {
         $data = $request->all();
+        $data['slug'] = Str::slug($request->nama_package); 
+
         $package->update($data);
         return redirect()->route('dashboard.package.index')->with('success', 'Package Update Successfully');
     }
