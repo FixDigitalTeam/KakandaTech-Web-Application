@@ -17,7 +17,7 @@ class LandingController extends Controller
     {
         $pagetitle = "SEO Content";
         $data = DB::table('packages')->select('*')->where('id_product', 1)->get();
-        $maxtrx = DB::table('transaction')->select('*')->where('payment_status', 'Success')->where('working_status', 'On Working')->count();
+        $maxtrx = DB::table('transactions')->select('*')->where('payment_status', 'Success')->where('working_status', 'On Working')->count();
         return view('pages.frontend.seo-content', compact(
             'pagetitle', 'data', 'maxtrx'
         ));
