@@ -36,7 +36,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::middleware(['auth', 'verified'])->name('dashboard.')->prefix('dashboard')->group(function () {
 
-    Route::get('/myprogress', [MemberController::class, 'myprogress'])->name('myprogress');
     Route::get('/mytransaction', [MemberController::class, 'mytransaction'])->name('mytransaction');
     
     // Route admin

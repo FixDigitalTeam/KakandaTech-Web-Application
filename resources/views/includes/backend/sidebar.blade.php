@@ -54,12 +54,6 @@
 
   @endif
 
-  <li class="nav-item {{ $head === 'My Progress' ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('dashboard.myprogress') }}">
-      <i class="fas fa-fw fa-spinner"></i>
-      <span>My Progress</span></a>
-  </li>
-
   <li class="nav-item {{ $head === 'My Transaction' ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('dashboard.mytransaction') }}">
       <i class="fas fa-fw fa-dollar"></i>

@@ -66,7 +66,7 @@
             </tr>
             <tr>
               <td>Deskripsi</td>
-              <td>{{ $package->deskripsi }}</td>
+              <td>{!! $package->deskripsi !!}</td>
             </tr>
           </tbody>
         </table>

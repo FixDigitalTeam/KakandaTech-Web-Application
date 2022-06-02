@@ -26,7 +26,7 @@
             </tr>
             <tr>
               <td>Content</td>
-              <td>{{ $blog->content }}</td>
+              <td>{!! $blog->content !!}</td>
             </tr>
             <tr>
               <td>Post</td>
