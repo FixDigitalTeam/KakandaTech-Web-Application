@@ -110,14 +110,14 @@
                      </div>
                      <a href="#" class="default-btn">Pilih Paket</a>
                      <ul class="features-list">
-                        <li><i class="ri-check-line"></i> {{ $item->keuntungan_1 }}</li>
-                        <li><i class="ri-check-line"></i> {{ $item->keuntungan_2 }}</li>
-                        <li><i class="ri-check-line"></i> {{ $item->keuntungan_3 }}</li>
-                        <li><i class="ri-check-line"></i> {{ $item->keuntungan_4 }}</li>
-                        <li><i class="ri-close-line"></i> {{ $item->keuntungan_5 }}</li>
-                        <li><i class="ri-close-line"></i> {{ $item->keuntungan_6 }}</li>
-                        <li><i class="ri-close-line"></i> {{ $item->keuntungan_7 }}</li>
-                        <li><i class="ri-close-line"></i> {{ $item->keuntungan_8 }}</li>
+                        <li><i class="{{ ($item->keuntungan_1 == '') ? '' : 'ri-check-line' }}"></i> {{ $item->keuntungan_1 }}</li>
+                        <li><i class="{{ ($item->keuntungan_2 == '') ? '' : 'ri-check-line' }}"></i> {{ $item->keuntungan_2 }}</li>
+                        <li><i class="{{ ($item->keuntungan_3 == '') ? '' : 'ri-check-line' }}"></i> {{ $item->keuntungan_3 }}</li>
+                        <li><i class="{{ ($item->keuntungan_4 == '') ? '' : 'ri-check-line' }}"></i> {{ $item->keuntungan_4 }}</li>
+                        <li><i class="{{ ($item->keuntungan_5 == '') ? '' : 'ri-check-line' }}"></i> {{ $item->keuntungan_5 }}</li>
+                        <li><i class="{{ ($item->keuntungan_6 == '') ? '' : 'ri-check-line' }}"></i> {{ $item->keuntungan_6 }}</li>
+                        <li><i class="{{ ($item->keuntungan_7 == '') ? '' : 'ri-check-line' }}"></i> {{ $item->keuntungan_7 }}</li>
+                        <li><i class="{{ ($item->keuntungan_8 == '') ? '' : 'ri-check-line' }}"></i> {{ $item->keuntungan_8 }}</li>
                      </ul>
                </div>
             </div>
