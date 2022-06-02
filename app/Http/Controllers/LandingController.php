@@ -64,6 +64,31 @@ class LandingController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function blog()
+    {
+        $data = DB::table('blogs')->select('*')->get();
+        $pagetitle = "Blog Data";
+        return view('pages.frontend.blog-data', compact('data', 'pagetitle'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function blogdetail(Request $request, $slug)
+    {
+        $blogdetail = DB::table('blogs')->select('*')->where('slug', $slug)->get();
+        return view('pages.frontend.article-detail', [
+            'pagetitle' => 'Percobaan'
+        ], compact('blogdetail'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
