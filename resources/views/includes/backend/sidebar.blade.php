@@ -55,7 +55,7 @@
   @endif
 
   <li class="nav-item {{ $head === 'My Transaction' ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('dashboard.mytransaction') }}">
+    <a class="nav-link" href="{{ route('dashboard.mytransaction.index') }}">
       <i class="fas fa-fw fa-dollar"></i>
       <span>My Transaction</span></a>
   </li>

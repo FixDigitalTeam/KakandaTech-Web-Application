@@ -36,7 +36,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::middleware(['auth', 'verified'])->name('dashboard.')->prefix('dashboard')->group(function () {
 
-    Route::get('/mytransaction', [MemberController::class, 'mytransaction'])->name('mytransaction');
+    Route::resource('mytransaction', MemberController::class);
     
     // Route admin
     Route::middleware(['admin'])->group(function () {
