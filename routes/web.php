@@ -8,9 +8,10 @@ use App\Http\Controllers\PackageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\TransactionController;
-use App\Http\Controllers\LandingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,15 +24,10 @@ use App\Http\Controllers\LandingController;
 |
 */
 
-Route::get('/', [HomeController::class, 'web'])->name('web');
-Route::get('/landing-home', function () {
-    return view('landing-home', [
-        'pagetitle' => 'Kakanda Tech - Digital IT Agency Profesional, Berkualitas, dan Terpercaya',
-    ]);
-});
-Route::get('/seo-content', [LandingController::class, 'seocontent']);
-Route::get('/web-development', [LandingController::class, 'webdevelopment']);
-Route::get('/mobile-development', [LandingController::class, 'mobiledevelopment']);
+Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/seo-content', [LandingController::class, 'seocontent'])->name('seocontent');
+Route::get('/web-development', [LandingController::class, 'webdevelopment'])->name('webdevelopment');
+Route::get('/mobile-development', [LandingController::class, 'mobiledevelopment'])->name('mobiledevelopment');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/verification/{id}', [CheckoutController::class, 'verification'])->name('verification');

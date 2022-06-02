@@ -7,12 +7,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function web() 
+    public function home() 
     {
-        $items = Package::with(['product'])->where('id_product', 1)->get();
-        return view('pages.frontend.home', [
-            'title' => 'Website',
-            'items' => $items
+        return view('pages.frontend.landing-home', [
+            'pagetitle' => 'Kakanda Tech - Digital IT Agency Profesional, Berkualitas, dan Terpercaya',
         ]);
     }
 

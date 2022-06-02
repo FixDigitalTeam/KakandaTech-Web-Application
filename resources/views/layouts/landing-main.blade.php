@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
    <!-- Required meta tags -->
    <meta charset="utf-8">
@@ -19,6 +20,7 @@
    <title>{{ $pagetitle }}</title>
    <link rel="icon" type="image/png" href="landing-assets/img/favicon.png">
 </head>
+
 <body>
    <!-- Start Navbar Area -->
    <div class="navbar-area">
@@ -40,15 +42,17 @@
                <div class="collapse navbar-collapse mean-menu">
                   <ul class="navbar-nav">
                      <li class="nav-item">
-                        <a href="/" class="nav-link active">Home</a>
+                        <a href="{{ route('home') }}" class="nav-link active">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a href="/seo-content" class="nav-link active">SEO Content</a>
+                        <a href="{{ route('seocontent') }}" class="nav-link active">SEO Content</a>
                      </li>
                      <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Development</a>
                         <ul class="dropdown-menu">
-                           <li class="nav-item"><a href="/web-development" class="nav-link">Website</a></li>
-                           <li class="nav-item"><a href="/mobile-development" class="nav-link">Mobile App</a></li>
+                           <li class="nav-item"><a href="{{ route('webdevelopment') }}" class="nav-link">Website</a>
+                           </li>
+                           <li class="nav-item"><a href="{{ route('mobiledevelopment') }}" class="nav-link">Mobile
+                                 App</a></li>
                         </ul>
                      </li>
                      <li class="nav-item">
@@ -58,10 +62,10 @@
                   </ul>
                   <div class="others-option">
                      @auth
-                        <a href="{{ route('dashboard.index') }}" class="default-btn">Dashboard</a>
+                     <a href="{{ route('dashboard.index') }}" class="default-btn">Dashboard</a>
                      @endauth
                      @guest
-                        <a href="{{ route('login') }}" class="default-btn">Login</a>
+                     <a href="{{ route('login') }}" class="default-btn">Login</a>
                      @endguest
                   </div>
                </div>
@@ -76,25 +80,27 @@
    <!-- Start Footer Area -->
    <div class="footer-area">
       <div class="container">
-            <div class="footer-content">
-               <a href="#" class="logo">
-                  <img src="landing-assets/img/logo.png" alt="logo">
-               </a>
-               <ul class="social-links">
-                  <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                  <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
-                  <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-                  <li><a href="#" target="_blank"><i class="ri-messenger-fill"></i></a></li>
-                  <li><a href="#" target="_blank"><i class="ri-github-fill"></i></a></li>
-               </ul>
-               <ul class="navbar-nav">
-                  <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-               </ul>
-               <p class="copyright">Copyright @<script>document.write(new Date().getFullYear())</script> <strong>Kakanda Tech IT Team</strong>. All Rights Reserved</p>
-            </div>
+         <div class="footer-content">
+            <a href="#" class="logo">
+               <img src="landing-assets/img/logo.png" alt="logo">
+            </a>
+            <ul class="social-links">
+               <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+               <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
+               <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+               <li><a href="#" target="_blank"><i class="ri-messenger-fill"></i></a></li>
+               <li><a href="#" target="_blank"><i class="ri-github-fill"></i></a></li>
+            </ul>
+            <ul class="navbar-nav">
+               <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+               <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
+               <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+               <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <p class="copyright">Copyright @<script>
+                  document.write(new Date().getFullYear())
+               </script> <strong>Kakanda Tech IT Team</strong>. All Rights Reserved</p>
+         </div>
       </div>
    </div>
    <!-- End Footer Area -->
@@ -114,4 +120,5 @@
    <script src="landing-assets/js/aos.js"></script>
    <script src="landing-assets/js/main.js"></script>
 </body>
+
 </html>
