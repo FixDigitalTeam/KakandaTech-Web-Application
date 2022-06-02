@@ -28,6 +28,8 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/seo-content', [LandingController::class, 'seocontent'])->name('seocontent');
 Route::get('/web-development', [LandingController::class, 'webdevelopment'])->name('webdevelopment');
 Route::get('/mobile-development', [LandingController::class, 'mobiledevelopment'])->name('mobiledevelopment');
+Route::get('/blog-data', [LandingController::class, 'blog'])->name('blog');
+Route::get('/blog/{id}', [LandingController::class, 'blogdetail'])->name('blogdetail');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/verification/{id}', [CheckoutController::class, 'verification'])->name('verification');
