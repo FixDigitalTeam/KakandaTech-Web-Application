@@ -7,7 +7,7 @@
   <!-- Page Heading -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Update Transaction</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Update {{ $transaction->user->name }} Transaction</h6>
     </div>
     <div class="card-body">
       <form action="{{ route('dashboard.transaction.update', $transaction->id_transaction)   }}" method="POST"
