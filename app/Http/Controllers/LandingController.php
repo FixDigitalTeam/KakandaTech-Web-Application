@@ -31,8 +31,10 @@ class LandingController extends Controller
     public function webdevelopment()
     {
         $pagetitle = "Website Development";
-        $data = DB::table('packages')->select('*')->where('id_product', 2)->get();
-        return view('pages.frontend.web-development', compact('pagetitle', 'data'));
+        $data = DB::table('packages')->select('*')->where('id_product', 2)->get();$maxtrx = DB::table('transactions')->select('*')->where('payment_status', 'Success')->where('working_status', 'On Working')->count();
+        return view('pages.frontend.seo-content', compact(
+            'pagetitle', 'data', 'maxtrx'
+        ));
     }
 
     /**
@@ -44,7 +46,10 @@ class LandingController extends Controller
     {
         $pagetitle = "Mobile Development";
         $data = DB::table('packages')->select('*')->where('id_product', 3)->get();
-        return view('pages.frontend.mobile-development', compact('pagetitle', 'data'));
+        $maxtrx = DB::table('transactions')->select('*')->where('payment_status', 'Success')->where('working_status', 'On Working')->count();
+        return view('pages.frontend.seo-content', compact(
+            'pagetitle', 'data', 'maxtrx'
+        ));
     }
 
     /**
@@ -55,7 +60,7 @@ class LandingController extends Controller
     public function transaction()
     {
         $pagetitle = "Verification Transaction";
-        return view('pages.frontend.transaction', compact('pagetitle'));
+        return view('pages.frontend.trx-verify', compact('pagetitle'));
     }
 
     /**
