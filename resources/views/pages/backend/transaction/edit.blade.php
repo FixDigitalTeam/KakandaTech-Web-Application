@@ -36,7 +36,7 @@
             {!! old('process_desc') ?? $transaction->process_desc !!}
           </textarea>
         </div>
-        <button type="submit" class="btn btn-primary float-right">Update Content</button>
+        <button type="submit" class="btn btn-primary float-right">Update Transaction</button>
       </form>
     </div>
   </div>

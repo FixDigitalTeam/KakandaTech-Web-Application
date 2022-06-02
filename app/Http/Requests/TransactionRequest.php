@@ -26,7 +26,7 @@ class TransactionRequest extends FormRequest
     {
         return [
             'payment_status' => 'required',
-            'persentase' => 'required|string',
+            'persentase' => 'required',
             'process_desc' => 'required'
         ];
     }

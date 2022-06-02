@@ -14,7 +14,7 @@ class Transaction extends Model
     protected $fillable = [
         'user_id', 'id_package', 'phone_number',
         'payment_method', 'payment_total', 'payment_status', 'project_desc',
-        'deadline', 'working_status', 'presentase', 'process_desc' 
+        'deadline', 'working_status', 'persentase', 'process_desc' 
     ];
 
     public function user() {
