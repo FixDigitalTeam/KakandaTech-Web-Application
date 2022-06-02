@@ -23,7 +23,14 @@ use App\Http\Controllers\TransactionController;
 */
 
 Route::get('/', [HomeController::class, 'web'])->name('web');
-
+Route::get('/landing-home', function () {
+    return view('landing-home', [
+        'pagetitle' => 'Kakanda Tech - Digital IT Agency Profesional, Berkualitas, dan Terpercaya',
+    ]);
+});
+Route::get('/seo-content', [LandingController::class, 'seocontent']);
+Route::get('/web-development', [LandingController::class, 'webdevelopment']);
+Route::get('/mobile-development', [LandingController::class, 'mobiledevelopment']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/verification/{id}', [CheckoutController::class, 'verification'])->name('verification');
