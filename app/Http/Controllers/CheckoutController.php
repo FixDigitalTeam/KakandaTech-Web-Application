@@ -8,6 +8,7 @@ use Midtrans\Config;
 use App\Models\Package;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\CheckoutRequest;
 
@@ -16,9 +17,11 @@ class CheckoutController extends Controller
     public function verification(Request $request, $id)
     {
         $package = Package::findOrFail($id);
+        $getproduct = DB::table('packages')->select('nama_product')->join('products', 'products.id_product', '=', 'packages.id_product')->where('id_package', $id)->get();
         return view('pages.frontend.checkout', [
-            'title' => 'Verification',
-        ], compact('package'));
+            'title' => 'Verifikasi Pesanan Anda',
+            'pagetitle' => 'Verifikasi Transaksi'
+        ], compact('package', 'getproduct'));
     }
 
     public function checkout(CheckoutRequest $request)
