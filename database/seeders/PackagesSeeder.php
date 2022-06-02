@@ -17,6 +17,7 @@ class PackagesSeeder extends Seeder
         DB::table('packages')->insert([
             [
                 'nama_package' => 'Regular',
+                'slug' => 'regular',
                 'harga' => '375000',
                 'deskripsi' => 'Paket ini cocok bagi para pelanggan yang ingin mengoptimalkan website tanpa perlu riset keyword',
                 'keuntungan_1' => 'Mendapatkan 25 Artikel 500 Kata',
@@ -33,6 +34,7 @@ class PackagesSeeder extends Seeder
             ],
             [
                 'nama_package' => 'Basic SEO',
+                'slug' => 'basic-seo',
                 'harga' => '800000',
                 'deskripsi' => 'Paket ini cocok bagi para pelanggan yang ingin mengoptimalkan website dengan artikel SEO',
                 'keuntungan_1' => 'Mendapatkan 50 Artikel 500 Kata',
@@ -49,6 +51,7 @@ class PackagesSeeder extends Seeder
             ],
             [
                 'nama_package' => 'Deep SEO',
+                'slug' => 'deep-seo',
                 'harga' => '1550000',
                 'deskripsi' => 'Paket ini cocok bagi para pelanggan yang ingin artikel SEO tanpa pusing riset keyword dan setting SEO',
                 'keuntungan_1' => 'Mendapatkan 100 Artikel 500 Kata',
@@ -65,6 +68,7 @@ class PackagesSeeder extends Seeder
             ],
             [
                 'nama_package' => 'Basic',
+                'slug' => 'basic',
                 'harga' => '600000',
                 'deskripsi' => 'Paket ini cocok bagi pelajar dan mahasiswa yang ingin membuat website skala kecil untuk keperluan tugas',
                 'keuntungan_1' => 'Gratis Bimbingan Pemakaian',
@@ -81,6 +85,7 @@ class PackagesSeeder extends Seeder
             ],
             [
                 'nama_package' => 'Medium',
+                'slug' => 'medium',
                 'harga' => '1500000',
                 'deskripsi' => 'Paket ini cocok bagi pelanggan yang ingin membuat situs sistem informasi seperti blog, forum, dan lainnya',
                 'keuntungan_1' => 'Gratis Setup Konten',
@@ -97,6 +102,7 @@ class PackagesSeeder extends Seeder
             ],
             [
                 'nama_package' => 'Pro',
+                'slug' => 'pro',
                 'harga' => '2500000',
                 'deskripsi' => 'Paket ini cocok bagi pelanggan yang ingin membuat website perusahaan supaya terlihat lebih profesional',
                 'keuntungan_1' => 'Gratis Setup Konten',
@@ -113,6 +119,7 @@ class PackagesSeeder extends Seeder
             ],
             [
                 'nama_package' => 'Basic',
+                'slug' => 'basic',
                 'harga' => '600000',
                 'deskripsi' => 'Paket ini cocok bagi pelajar dan mahasiswa yang ingin membuat aplikasi mobile skala kecil untuk keperluan tugas',
                 'keuntungan_1' => 'Gratis Bimbingan Pemakaian',
@@ -129,6 +136,7 @@ class PackagesSeeder extends Seeder
             ],
             [
                 'nama_package' => 'Medium',
+                'slug' => 'medium',
                 'harga' => '1500000',
                 'deskripsi' => 'Paket ini cocok bagi pelanggan yang ingin membuat aplikasi mobile dengan sistem transaksi sederhana untuk kasir toko',
                 'keuntungan_1' => 'Gratis Setup Konten',
@@ -145,6 +153,7 @@ class PackagesSeeder extends Seeder
             ],
             [
                 'nama_package' => 'Pro',
+                'slug' => 'pro',
                 'harga' => '2500000',
                 'deskripsi' => 'Paket ini cocok bagi pelanggan yang ingin membuat aplikasi mobile untuk perusahaan dan sistem transaksi online',
                 'keuntungan_1' => 'Gratis Setup Konten',
