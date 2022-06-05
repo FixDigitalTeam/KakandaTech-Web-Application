@@ -144,8 +144,8 @@
          @endforeach
       </div>
    </div>
-   <div class="shape12"><img src="landing-assets/img/shape/shape11.png" alt="shape"></div>
-   <div class="shape13"><img src="landing-assets/img/shape/shape15.png" alt="shape"></div>
+   <div class="shape12"><img src="{{ url('landing-assets/img/shape/shape11.png') }}" alt="shape"></div>
+   <div class="shape13"><img src="{{ url('landing-assets/img/shape/shape15.png') }}" alt="shape"></div>
 </div>
 <!-- End Pricing Area -->
 @endsection

@@ -56,7 +56,7 @@
                         </ul>
                      </li>
                      <li class="nav-item">
-                        <a href="/blog-data" class="nav-link">Blog</a>
+                        <a href="{{ route('blog') }}" class="nav-link">Blog</a>
                      </li>
                      <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                   </ul>
@@ -133,4 +133,5 @@
    </script>
    <!--End of Tawk.to Script-->
 </body>
+
 </html>
