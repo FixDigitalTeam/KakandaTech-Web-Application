@@ -122,3 +122,17 @@
 <!-- /.container-fluid -->
 
 @endsection
+
+@push('scripts')
+<script>
+  $(document).ready(function() {
+            toastr.options.timeOut = 5000;
+            @if ($errors->any())
+            @foreach ($errors->all() as $error)
+              toastr.error('{{ $error }}');
+            @endforeach
+            
+            @endif
+          });
+</script>
+@endpush
