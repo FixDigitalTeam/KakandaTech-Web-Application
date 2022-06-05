@@ -36,7 +36,7 @@
             </tr>
             <tr>
               <td>Deadline</td>
-              <td>{{ $transaction->deadline }}</td>
+              <td>{{ \Carbon\Carbon::now()->addDays($transaction->deadline)->toDateString() }}</td>
             </tr>
           </tbody>
         </table>

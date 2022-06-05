@@ -25,7 +25,7 @@ class CreateTransactionsTable extends Migration
             $table->string('payment_status', 8)->default('Pending');
             $table->string('payment_url')->nullable();
             $table->text('project_desc')->nullable();
-            $table->date('deadline')->nullable();
+            $table->integer('deadline')->nullable();
             $table->string('working_status', 20)->default('Off Working');
             $table->string('persentase', 5)->default('0%');
             $table->text('process_desc')->nullable();

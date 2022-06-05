@@ -28,7 +28,7 @@ class PackagesSeeder extends Seeder
                 'keuntungan_6' => 'Gratis Pasang Gambar',
                 'keuntungan_7' => 'Bonus 2 Artikel 500 Kata',
                 'keuntungan_8' => '',
-                'waktu_pengerjaan' => '12 Hari',
+                'waktu_pengerjaan' => '12',
                 'id_product' => '1',
                 'created_at' => now()
             ],
@@ -45,7 +45,7 @@ class PackagesSeeder extends Seeder
                 'keuntungan_6' => 'Gratis Pasang Gambar',
                 'keuntungan_7' => 'Bonus 5 Artikel 500 Kata',
                 'keuntungan_8' => '',
-                'waktu_pengerjaan' => '26 Hari',
+                'waktu_pengerjaan' => '26',
                 'id_product' => '1',
                 'created_at' => now()
             ],
@@ -62,13 +62,13 @@ class PackagesSeeder extends Seeder
                 'keuntungan_6' => 'Gratis Pasang Gambar',
                 'keuntungan_7' => 'Bonus 10 Artikel 500 Kata',
                 'keuntungan_8' => 'Gratis Meta Description',
-                'waktu_pengerjaan' => '46 Hari',
+                'waktu_pengerjaan' => '46',
                 'id_product' => '1',
                 'created_at' => now()
             ],
             [
-                'nama_package' => 'Basic',
-                'slug' => 'basic',
+                'nama_package' => 'Web Basic',
+                'slug' => 'web-basic',
                 'harga' => '600000',
                 'deskripsi' => 'Paket ini cocok bagi pelajar dan mahasiswa yang ingin membuat website skala kecil untuk keperluan tugas',
                 'keuntungan_1' => 'Gratis Bimbingan Pemakaian',
@@ -79,13 +79,13 @@ class PackagesSeeder extends Seeder
                 'keuntungan_6' => '',
                 'keuntungan_7' => '',
                 'keuntungan_8' => '',
-                'waktu_pengerjaan' => '14 Hari',
+                'waktu_pengerjaan' => '14',
                 'id_product' => '2',
                 'created_at' => now()
             ],
             [
-                'nama_package' => 'Medium',
-                'slug' => 'medium',
+                'nama_package' => 'Web Medium',
+                'slug' => 'web-medium',
                 'harga' => '1500000',
                 'deskripsi' => 'Paket ini cocok bagi pelanggan yang ingin membuat situs sistem informasi seperti blog, forum, dan lainnya',
                 'keuntungan_1' => 'Gratis Setup Konten',
@@ -96,13 +96,13 @@ class PackagesSeeder extends Seeder
                 'keuntungan_6' => 'Gratis Maintenance 2 Minggu',
                 'keuntungan_7' => 'Dipandu Selama 7x24 Jam',
                 'keuntungan_8' => '',
-                'waktu_pengerjaan' => '30 Hari',
+                'waktu_pengerjaan' => '30',
                 'id_product' => '2',
                 'created_at' => now()
             ],
             [
-                'nama_package' => 'Pro',
-                'slug' => 'pro',
+                'nama_package' => 'Web Pro',
+                'slug' => 'web-pro',
                 'harga' => '2500000',
                 'deskripsi' => 'Paket ini cocok bagi pelanggan yang ingin membuat website perusahaan supaya terlihat lebih profesional',
                 'keuntungan_1' => 'Gratis Setup Konten',
@@ -113,13 +113,13 @@ class PackagesSeeder extends Seeder
                 'keuntungan_6' => 'Gratis Maintenance 1 Bulan',
                 'keuntungan_7' => 'Dipandu Selama 7x24 Jam',
                 'keuntungan_8' => 'Gratis Artikel SEO',
-                'waktu_pengerjaan' => '45 Hari',
+                'waktu_pengerjaan' => '45',
                 'id_product' => '2',
                 'created_at' => now()
             ],
             [
-                'nama_package' => 'Basic',
-                'slug' => 'basic',
+                'nama_package' => 'Mobile Basic',
+                'slug' => 'mobile-basic',
                 'harga' => '600000',
                 'deskripsi' => 'Paket ini cocok bagi pelajar dan mahasiswa yang ingin membuat aplikasi mobile skala kecil untuk keperluan tugas',
                 'keuntungan_1' => 'Gratis Bimbingan Pemakaian',
@@ -130,13 +130,13 @@ class PackagesSeeder extends Seeder
                 'keuntungan_6' => '',
                 'keuntungan_7' => '',
                 'keuntungan_8' => '',
-                'waktu_pengerjaan' => '14 Hari',
+                'waktu_pengerjaan' => '14',
                 'id_product' => '3',
                 'created_at' => now()
             ],
             [
-                'nama_package' => 'Medium',
-                'slug' => 'medium',
+                'nama_package' => 'Mobile Medium',
+                'slug' => 'mobile-medium',
                 'harga' => '1500000',
                 'deskripsi' => 'Paket ini cocok bagi pelanggan yang ingin membuat aplikasi mobile dengan sistem transaksi sederhana untuk kasir toko',
                 'keuntungan_1' => 'Gratis Setup Konten',
@@ -147,13 +147,13 @@ class PackagesSeeder extends Seeder
                 'keuntungan_6' => '',
                 'keuntungan_7' => '',
                 'keuntungan_8' => '',
-                'waktu_pengerjaan' => '30 Hari',
+                'waktu_pengerjaan' => '30',
                 'id_product' => '3',
                 'created_at' => now()
             ],
             [
-                'nama_package' => 'Pro',
-                'slug' => 'pro',
+                'nama_package' => 'Mobile Pro',
+                'slug' => 'mobile-pro',
                 'harga' => '2500000',
                 'deskripsi' => 'Paket ini cocok bagi pelanggan yang ingin membuat aplikasi mobile untuk perusahaan dan sistem transaksi online',
                 'keuntungan_1' => 'Gratis Setup Konten',
@@ -164,7 +164,7 @@ class PackagesSeeder extends Seeder
                 'keuntungan_6' => 'Dipandu Selama 7x24 Jam',
                 'keuntungan_7' => 'Gratis Panduan Instalasi',
                 'keuntungan_8' => '',
-                'waktu_pengerjaan' => '60 Hari',
+                'waktu_pengerjaan' => '60',
                 'id_product' => '3',
                 'created_at' => now()
             ]

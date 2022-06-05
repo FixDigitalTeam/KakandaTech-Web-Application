@@ -30,6 +30,7 @@
          @csrf
          <input type="hidden" value="{{ $package->id_package }}" name="id_package">
          <input type="hidden" value="{{ $package->harga }}" name="payment_total">
+         <input type="hidden" value="{{ $package->waktu_pengerjaan }}" name="deadline">
          <div class="row">
             <div class="col-lg-6 col-md-12">
                <div class="billing-details">
@@ -83,7 +84,7 @@
                            <tr>
                               <td class="product-name">Lama Pengerjaan</a>
                               <td class="product-total">
-                                 <span class="subtotal-amount">{{ $package->waktu_pengerjaan }}</span>
+                                 <span class="subtotal-amount">{{ $package->waktu_pengerjaan }} Hari</span>
                               </td>
                            </tr>
                            <tr>

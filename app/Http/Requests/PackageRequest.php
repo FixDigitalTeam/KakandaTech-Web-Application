@@ -36,7 +36,7 @@ class PackageRequest extends FormRequest
         'keuntungan_6' => 'max:80',
         'keuntungan_7' => 'max:80',
         'keuntungan_8' => 'max:80', 
-        'waktu_pengerjaan' => 'required|string|max:80', 
+        'waktu_pengerjaan' => 'required|integer', 
         'id_product' => 'required'
         ];
     }
