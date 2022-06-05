@@ -66,6 +66,7 @@
           <label for="id_product" class="form-label">Product</label>
           <select name="id_product" class="form-select form-control">
             <option value="">Choose Product</option>
+            <option disabled>-----------------</option>
             @foreach ($product as $product)
             <option value="{{ $product->id_product }}">{{ $product->nama_product }}</option>
             @endforeach

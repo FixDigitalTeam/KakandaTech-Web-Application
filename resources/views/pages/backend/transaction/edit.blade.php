@@ -26,6 +26,15 @@
           </select>
         </div>
         <div class="form-group">
+          <label for="working_status" class="form-label">Working Status</label>
+          <select name="working_status" class="form-select form-control">
+            <option value="{{ $transaction->working_status }}">{{ $transaction->working_status }}</option>
+            <option disabled>-----------------</option>
+            <option value="On Working">On Working</option>
+            <option value="Off Working">Off Working</option>
+          </select>
+        </div>
+        <div class="form-group">
           <label for="persentase" class="form-label">Progress Percentage</label>
           <input type="text" class="form-control" name="persentase" id="persentase"
             value="{{ old('persentase') ?? $transaction->persentase }}">
