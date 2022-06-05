@@ -27,9 +27,9 @@
 <div class="checkout-area ptb-100">
    <div class="container">
       <form action="{{ route('checkout') }}" method="post" autocomplete="off">
-        @csrf
-        <input type="hidden" value="{{ $package->id_package }}" name="id_package">
-        <input type="hidden" value="{{ $package->harga }}" name="payment_total">
+         @csrf
+         <input type="hidden" value="{{ $package->id_package }}" name="id_package">
+         <input type="hidden" value="{{ $package->harga }}" name="payment_total">
          <div class="row">
             <div class="col-lg-6 col-md-12">
                <div class="billing-details">
@@ -55,8 +55,8 @@
                      </div>
                      <div class="col-lg-12 col-md-12">
                         <div class="form-group">
-                          <label>Konfirmasi Tanggal Pembelian <span class="required">*</span></label>
-                          <input type="date" class="form-control" value="{{ date('Y-m-d') }}" readonly>
+                           <label>Konfirmasi Tanggal Pembelian <span class="required">*</span></label>
+                           <input type="date" class="form-control" value="{{ date('Y-m-d') }}" readonly>
                         </div>
                      </div>
                   </div>
@@ -89,9 +89,7 @@
                            <tr>
                               <td class="product-name">Kategori Layanan</a>
                               <td class="product-total">
-                                @foreach ($getproduct as $item)
-                                  <span class="subtotal-amount">{{ $item->nama_product }}</span>
-                                @endforeach
+                                 <span class="subtotal-amount">{{ $package->product->nama_product }}</span>
                               </td>
                            </tr>
                         </tbody>
@@ -102,10 +100,12 @@
                         <p>
                            <input type="radio" id="direct-bank-transfer" name="radio-group" checked>
                            <label for="direct-bank-transfer">Midtrans Payment</label>
-                           Pembayaran lebih mudah dan cepat dengan Midtrans. Keamanan transaksi terjamin. Dilengkapi juga dengan pendeteksi fraud dan terintegrasi dengan 24 pilihan metode pembayaran online.
+                           Pembayaran lebih mudah dan cepat dengan Midtrans. Keamanan transaksi terjamin. Dilengkapi
+                           juga dengan pendeteksi fraud dan terintegrasi dengan 24 pilihan metode pembayaran online.
                         </p>
                      </div>
-                     <button type="submit" class="default-btn"><i class='bx bx-paper-plane'></i> Verifikasi Pesanan</button>
+                     <button type="submit" class="default-btn"><i class='bx bx-paper-plane'></i> Verifikasi
+                        Pesanan</button>
                   </div>
                </div>
             </div>

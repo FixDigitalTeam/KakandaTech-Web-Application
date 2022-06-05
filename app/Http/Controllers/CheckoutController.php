@@ -14,14 +14,13 @@ use App\Http\Requests\CheckoutRequest;
 
 class CheckoutController extends Controller
 {
-    public function verification(Request $request, $id)
+    public function verification(Request $request, $slug)
     {
-        $package = Package::findOrFail($id);
-        $getproduct = DB::table('packages')->select('nama_product')->join('products', 'products.id_product', '=', 'packages.id_product')->where('id_package', $id)->get();
+        $package = Package::with(['product'])->where('slug', $slug)->firstOrFail();
         return view('pages.frontend.checkout', [
             'title' => 'Verifikasi Pesanan Anda',
             'pagetitle' => 'Verifikasi Transaksi'
-        ], compact('package', 'getproduct'));
+        ], compact('package'));
     }
 
     public function checkout(CheckoutRequest $request)
@@ -30,16 +29,15 @@ class CheckoutController extends Controller
         $data['user_id'] = Auth::user()->id; 
 
         $transaction = Transaction::with(['package', 'user'])->create($data);
-        // Konfigurasi Midtrans
+        
         Config::$serverKey = config('services.midtrans.serverKey');
         Config::$isProduction = config('services.midtrans.isProduction');
         Config::$isSanitized = config('services.midtrans.isSanitized');
         Config::$is3ds = config('services.midtrans.is3ds');
 
-        // Setup variable midtrans
         $midtrans = [
             'transaction_details' => [
-                'order_id' => 'TRX-' . $transaction->id_transaction,
+                'order_id' => 'TEST-' . $transaction->id_transaction,
                 'gross_amount' => (int) $transaction->payment_total,
             ],
             'customer_details' => [
@@ -49,15 +47,13 @@ class CheckoutController extends Controller
             'enabled_payments' => ['bank_transfer'],
             'vtweb' => []
         ];
-        // Payment process
+
         try {
-            // Get Snap Payment Page URL
             $paymentUrl = Snap::createTransaction($midtrans)->redirect_url;
             
             $transaction->payment_url = $paymentUrl;
             $transaction->save();
 
-            // Redirect to Snap Payment Page
             return redirect($paymentUrl);
         }
         catch (Exception $e) {
