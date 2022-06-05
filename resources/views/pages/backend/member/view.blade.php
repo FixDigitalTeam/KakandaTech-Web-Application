@@ -7,6 +7,34 @@
     <i class="fa-solid fa-caret-left"></i> Back
   </a>
 
+  @if ($mytransaction->payment_status == 'Success' and $mytransaction->project_desc == '')
+  <div class="alert alert-success" role="alert">
+    Your payment has been successful. Please complete the project description!
+  </div>
+  <!-- Page Heading -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Project Description</h6>
+    </div>
+    <div class="card-body">
+      <form action="{{ route('dashboard.mytransaction.update', $mytransaction->id_transaction) }}" method="POST"
+        enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
+        <div class="form-group">
+          <label for="project_desc" class="form-label">Project Description</label>
+          <textarea class="form-control" name="project_desc" id="project_desc">
+            {!! old('project_desc') ?? $mytransaction->project_desc !!}
+          </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary float-right">Submit</button>
+      </form>
+    </div>
+  </div>
+  @endif
+
+
+  <!-- Page Heading -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary">{{ Auth::user()->name }} Working Status</h6>
@@ -71,7 +99,7 @@
             </tr>
             <tr>
               <td>Payment Total</td>
-              <td>Rp.{{ $mytransaction->payment_total }}</td>
+              <td>Rp. {{ $mytransaction->payment_total }}</td>
             </tr>
             <tr>
               <td>Payment Status</td>

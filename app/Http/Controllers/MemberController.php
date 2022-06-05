@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use App\Http\Requests\MemberRequest;
 use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -74,9 +75,9 @@ class MemberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        
     }
 
     /**
@@ -86,9 +87,11 @@ class MemberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MemberRequest $request, Transaction $mytransaction)
     {
-        //
+        $data = $request->all();
+        $mytransaction->update($data);
+        return redirect()->route('dashboard.mytransaction.index')->with('success', 'User Update Successfully');
     }
 
     /**
