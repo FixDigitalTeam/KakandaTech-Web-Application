@@ -7,10 +7,47 @@
     <i class="fa-solid fa-caret-left"></i> Back
   </a>
 
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">{{ $transaction->user->name }} Working Status</h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" width="100%" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>Percentage</td>
+              <td style="width: 80%">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                    style="width: {{ $transaction->persentase }}">{{
+                    $transaction->persentase }}</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Working Status</td>
+              <td>{{ $transaction->working_status}}</td>
+            </tr>
+            <tr>
+              <td>Process Description</td>
+              <td>{!! $transaction->process_desc !!}</td>
+            </tr>
+            <tr>
+              <td>Deadline</td>
+              <td>{{ $transaction->deadline }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <!-- Page Heading -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">{{ $transaction->user->name }} Transaction</h6>
+      <h6 class="m-0 font-weight-bold text-primary">{{ $transaction->user->name }} Transaction Detail</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -18,7 +55,7 @@
           <tbody>
             <tr>
               <td>Customer</td>
-              <td>{{ $transaction->user->name }}</td>
+              <td style="width: 80%">{{ $transaction->user->name }}</td>
             </tr>
             <tr>
               <td>Package</td>
@@ -43,22 +80,6 @@
             <tr>
               <td>Project Description</td>
               <td>{!! $transaction->project_desc !!}</td>
-            </tr>
-            <tr>
-              <td>Process Description</td>
-              <td>{!! $transaction->process_desc !!}</td>
-            </tr>
-            <tr>
-              <td>Deadline</td>
-              <td>{{ $transaction->deadline }}</td>
-            </tr>
-            <tr>
-              <td>Working Status</td>
-              <td>{{ $transaction->working_status}}</td>
-            </tr>
-            <tr>
-              <td>Percentage</td>
-              <td>{{ $transaction->persentase}}</td>
             </tr>
             <tr>
               <td>Buying Time</td>
