@@ -104,7 +104,7 @@
       </div>
    </div>
    <!-- End Footer Area -->
-   <div class="go-top"><i class="ri-arrow-up-s-line"></i></div>
+   
    <!-- Link of JS files -->
    <script src="{{ url('landing-assets/js/jquery.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/bootstrap.bundle.min.js') }}"></script>
