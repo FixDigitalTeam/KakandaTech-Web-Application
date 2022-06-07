@@ -33,8 +33,9 @@ class LandingController extends Controller
     {
         $pagetitle = "Website Development";
         $data = DB::table('packages')->select('*')->where('id_product', 2)->get();$maxtrx = DB::table('transactions')->select('*')->where('payment_status', 'Success')->where('working_status', 'On Working')->count();
+        $getdeadline = DB::table('transactions')->where('payment_status', 'Success')->where('working_status', 'On Working')->orderBy('deadline', 'asc')->limit(1)->get();
         return view('pages.frontend.seo-content', compact(
-            'pagetitle', 'data', 'maxtrx'
+            'pagetitle', 'data', 'maxtrx', 'getdeadline'
         ));
     }
 
@@ -48,8 +49,9 @@ class LandingController extends Controller
         $pagetitle = "Mobile Development";
         $data = DB::table('packages')->select('*')->where('id_product', 3)->get();
         $maxtrx = DB::table('transactions')->select('*')->where('payment_status', 'Success')->where('working_status', 'On Working')->count();
+        $getdeadline = DB::table('transactions')->where('payment_status', 'Success')->where('working_status', 'On Working')->orderBy('deadline', 'asc')->limit(1)->get();
         return view('pages.frontend.seo-content', compact(
-            'pagetitle', 'data', 'maxtrx'
+            'pagetitle', 'data', 'maxtrx', 'getdeadline'
         ));
     }
 
