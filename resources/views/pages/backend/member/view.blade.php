@@ -64,7 +64,7 @@
             </tr>
             <tr>
               <td>Deadline</td>
-              <td>{{ $mytransaction->deadline }}</td>
+              <td>{{ date('l, d F Y', strtotime($mytransaction->deadline)) }}</td>
             </tr>
           </tbody>
         </table>
