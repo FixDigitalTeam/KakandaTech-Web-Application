@@ -147,3 +147,17 @@
 </div>
 <!-- End Pricing Area -->
 @endsection
+
+@foreach ($getdeadline as $deadlineasc)
+<script>
+   function limittrx() {
+      Swal.fire({
+         title: 'Ups, Gagal Memilih Paket!',
+         text: 'Saat ini tidak bisa melakukan pemesanan karena jumlah orderan melebihi batas. Silahkan lakukan pemesanan kembali pada tanggal {{ $deadlineasc->deadline }}',
+         icon: 'error',
+         showConfirmButton: false,
+         timer: 5000
+      })
+   }
+</script>
+@endforeach
