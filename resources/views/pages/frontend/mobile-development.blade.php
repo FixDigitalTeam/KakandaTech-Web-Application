@@ -115,11 +115,11 @@
                   <span>Rp.</span>{{ $item->harga }}
                </div>
                @if ($maxtrx >= 4)
-               <button class="default-btn"
-                  onclick="alert('Saat ini sedang tidak bisa melakukan pemesanan karena jumlah orderan melebihi batas. Silahkan melakukan pemesanan kembali pada tanggal …sekian…')">Pilih
-                  Paket</button>
+                  <button class="default-btn" onclick="limittrx()">
+                     Pilih Paket
+                  </button>
                @else
-               <a href="{{ route('verification', $item->slug) }}" class="default-btn">Pilih Paket</a>
+                  <a href="{{ route('verification', $item->slug) }}" class="default-btn">Pilih Paket</a>
                @endif
                <ul class="features-list">
                   <li><i class="{{ ($item->keuntungan_1 == '') ? '' : 'ri-check-line' }}"></i> {{ $item->keuntungan_1 }}
