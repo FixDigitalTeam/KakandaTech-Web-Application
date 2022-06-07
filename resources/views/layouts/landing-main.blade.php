@@ -108,6 +108,7 @@
    <!-- Link of JS files -->
    <script src="{{ url('landing-assets/js/jquery.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/bootstrap.bundle.min.js') }}"></script>
+   <script src="{{ url('landing-assets/alerts/sweetalert2.all.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/owl.carousel.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/swiper-bundle.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/magnific-popup.min.js') }}"></script>
@@ -119,6 +120,17 @@
    <script src="{{ url('landing-assets/js/ajaxchimp.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/aos.js') }}"></script>
    <script src="{{ url('landing-assets/js/main.js') }}"></script>
+   <script>
+      function limittrx() {
+         Swal.fire({
+            title: 'Ups, Gagal Memilih Paket!',
+            text: 'Saat ini sedang tidak bisa melakukan pemesanan karena jumlah orderan melebihi batas. Silahkan melakukan pemesanan kembali pada tanggal …sekian…',
+            icon: 'error',
+            showConfirmButton: false,
+            timer: 6000
+         })
+      }
+   </script>
    <!--Start of Tawk.to Script-->
    <script type="text/javascript">
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart = new Date();
