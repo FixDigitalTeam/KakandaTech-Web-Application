@@ -8,6 +8,7 @@ use Midtrans\Config;
 use App\Models\Package;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\CheckoutRequest;
@@ -17,16 +18,17 @@ class CheckoutController extends Controller
     public function verification(Request $request, $slug)
     {
         $package = Package::with(['product'])->where('slug', $slug)->firstOrFail();
+        $currentdate = Carbon::now();
         return view('pages.frontend.checkout', [
             'title' => 'Verifikasi Pesanan Anda',
             'pagetitle' => 'Verifikasi Transaksi'
-        ], compact('package'));
+        ], compact('package', 'currentdate'));
     }
 
     public function checkout(CheckoutRequest $request)
     {
         $data = $request->all();
-        $data['user_id'] = Auth::user()->id; 
+        $data['user_id'] = Auth::user()->id;
 
         $transaction = Transaction::with(['package', 'user'])->create($data);
         
@@ -60,5 +62,4 @@ class CheckoutController extends Controller
             echo $e->getMessage();
         }
     }
-    
 }
