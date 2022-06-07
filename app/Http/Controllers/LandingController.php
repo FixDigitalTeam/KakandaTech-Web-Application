@@ -83,9 +83,23 @@ class LandingController extends Controller
     public function blogdetail(Request $request, $slug)
     {
         $blogdetail = DB::table('blogs')->select('*')->where('slug', $slug)->get();
+        $popularpost = DB::table('blogs')->select('*')->limit(4)->get();
+        $releatedpost = DB::table('blogs')->select('*')->limit(2)->get();
         return view('pages.frontend.article-detail', [
-            'pagetitle' => 'Percobaan'
-        ], compact('blogdetail'));
+            'pagetitle' => 'Blog Details',
+        ], compact('blogdetail', 'popularpost', 'releatedpost'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function contactus()
+    {
+        return view('pages.frontend.contact-us', [
+            'pagetitle' => 'Contact Us',
+        ]);
     }
 
     /**
