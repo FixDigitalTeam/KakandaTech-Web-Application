@@ -87,8 +87,7 @@
                   <i class="ri-pie-chart-2-line"></i>
                </div>
                <h3>Sesuai Keinginan</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
             </div>
          </div>
       </div>
@@ -157,6 +156,7 @@
          title: 'Ups, Gagal Memilih Paket!',
          text: 'Saat ini tidak bisa melakukan pemesanan karena jumlah orderan melebihi batas. Silahkan lakukan pemesanan kembali pada tanggal {{ $deadlineasc->deadline }}',
          icon: 'error',
+         padding: '0px 0px 36px 0px',
          showConfirmButton: false,
          timer: 5000
       })

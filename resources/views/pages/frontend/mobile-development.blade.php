@@ -157,6 +157,7 @@
          title: 'Ups, Gagal Memilih Paket!',
          text: 'Saat ini tidak bisa melakukan pemesanan karena jumlah orderan melebihi batas. Silahkan lakukan pemesanan kembali pada tanggal {{ $deadlineasc->deadline }}',
          icon: 'error',
+         padding: '0px 0px 36px 0px',
          showConfirmButton: false,
          timer: 5000
       })

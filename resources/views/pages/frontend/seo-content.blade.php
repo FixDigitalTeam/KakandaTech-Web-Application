@@ -37,8 +37,7 @@
                   <i class="ri-eye-line"></i>
                </div>
                <h3>Human Friendly & SEO Friendly</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -47,8 +46,7 @@
                   <i class="ri-stack-line"></i>
                </div>
                <h3>Harga Murah Kualitas Terjamin</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -57,8 +55,7 @@
                   <i class="ri-leaf-line"></i>
                </div>
                <h3>Gratis Revisi Sepuasnya</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -67,8 +64,7 @@
                   <i class="ri-secure-payment-line"></i>
                </div>
                <h3>Optimasi Keyword</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -77,8 +73,7 @@
                   <i class="ri-cloud-line"></i>
                </div>
                <h3>Original, Tanpa Copas</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -87,8 +82,7 @@
                   <i class="ri-pie-chart-2-line"></i>
                </div>
                <h3>Konsultasi SEO</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
             </div>
          </div>
       </div>
@@ -155,6 +149,7 @@
          title: 'Ups, Gagal Memilih Paket!',
          text: 'Saat ini tidak bisa melakukan pemesanan karena jumlah orderan melebihi batas. Silahkan lakukan pemesanan kembali pada tanggal {{ $deadlineasc->deadline }}',
          icon: 'error',
+         padding: '0px 0px 36px 0px',
          showConfirmButton: false,
          timer: 5000
       })
