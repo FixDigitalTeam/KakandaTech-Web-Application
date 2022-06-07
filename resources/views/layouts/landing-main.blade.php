@@ -120,19 +120,6 @@
    <script src="{{ url('landing-assets/js/ajaxchimp.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/aos.js') }}"></script>
    <script src="{{ url('landing-assets/js/main.js') }}"></script>
-   @foreach ($getdeadline as $deadlineasc)
-   <script>
-      function limittrx() {
-         Swal.fire({
-            title: 'Ups, Gagal Memilih Paket!',
-            text: 'Saat ini tidak bisa melakukan pemesanan karena jumlah orderan melebihi batas. Silahkan lakukan pemesanan kembali pada tanggal {{ $deadlineasc->deadline }}',
-            icon: 'error',
-            showConfirmButton: false,
-            timer: 6000
-         })
-      }
-   </script>
-   @endforeach
    <!--Start of Tawk.to Script-->
    <script type="text/javascript">
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart = new Date();
