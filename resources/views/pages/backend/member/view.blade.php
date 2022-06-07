@@ -64,7 +64,7 @@
             </tr>
             <tr>
               <td>Deadline</td>
-              <td>{{ \Carbon\Carbon::now()->addDays($mytransaction->deadline)->toDateString() }}</td>
+              <td>{{ $mytransaction->deadline }}</td>
             </tr>
           </tbody>
         </table>
@@ -111,7 +111,7 @@
             </tr>
             <tr>
               <td>Buying Time</td>
-              <td>{{ \Carbon\Carbon::create($mytransaction->created_at)->format('F n, Y') }}</td>
+              <td>{{ $mytransaction->created_at->translatedFormat('l, d F Y') }}</td>
             </tr>
           </tbody>
         </table>
