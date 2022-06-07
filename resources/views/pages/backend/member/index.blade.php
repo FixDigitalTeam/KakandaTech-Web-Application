@@ -11,7 +11,23 @@
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Transaction Information</h6>
+      <div class="row">
+        <div class="col-lg-6">
+          <h5 class="mt-2 font-weight-bold text-primary">Transaction Information</h5>
+        </div>
+        <div class="col-lg-6" align="right">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Pilih Paket Baru
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="{{ route('seocontent') }}">SEO Content</a>
+              <a class="dropdown-item" href="{{ route('webdevelopment') }}">Website Development</a>
+              <a class="dropdown-item" href="{{ route('mobiledevelopment') }}">Mobile Development</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="card-body">
       <div class="table-responsive">
