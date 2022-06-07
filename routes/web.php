@@ -29,7 +29,8 @@ Route::get('/seo-content', [LandingController::class, 'seocontent'])->name('seoc
 Route::get('/web-development', [LandingController::class, 'webdevelopment'])->name('webdevelopment');
 Route::get('/mobile-development', [LandingController::class, 'mobiledevelopment'])->name('mobiledevelopment');
 Route::get('/blog-data', [LandingController::class, 'blog'])->name('blog');
-Route::get('/blog/{id}', [LandingController::class, 'blogdetail'])->name('blogdetail');
+Route::get('/blog/{slug}', [LandingController::class, 'blogdetail'])->name('blogdetail');
+Route::get('contact-us', [LandingController::class, 'contactus'])->name('contactus');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/verification/{id}', [CheckoutController::class, 'verification'])->name('verification');
