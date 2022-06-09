@@ -158,7 +158,7 @@
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi vero non atque, libero
                   aut est neque inventore omnis soluta, distinctio ipsum illum accusantium, ratione itaque iste quod.
                   Natus. Lorem ipsum dolor.</p>
-               <a href="{{ route('seocontent')}}" class="default-btn">Detail Product</a>
+               <a href="{{ route('seocontent') }}" class="default-btn">Detail Product</a>
             </div>
          </div>
       </div>

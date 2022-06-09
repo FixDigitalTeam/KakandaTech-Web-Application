@@ -4,10 +4,10 @@
 <div class="page-title-area">
    <div class="container">
       <div class="page-title-content">
-         <h2>Contac Us</h2>
+         <h2>Contact Us</h2>
          <ul>
-            <li><a href="/">Home</a></li>
-            <li>Contac Us</li>
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li>Contact Us</li>
          </ul>
       </div>
    </div>
@@ -28,7 +28,8 @@
    <div class="container">
       <div class="section-title">
          <h2>Hubungi Kami</h2>
-         <p>Jika Anda mengalami kendala atau menemukan bug saat mengakses website dan aplikasi kami. Segera hubungi kontak kami melalui form atau kontak di bawah ini.</p>
+         <p>Jika Anda mengalami kendala atau menemukan bug saat mengakses website dan aplikasi kami. Segera hubungi
+            kontak kami melalui form atau kontak di bawah ini.</p>
       </div>
       <div class="contact-form">
          <form action="{{ route('sendmessage') }}" method="post" autocomplete="off">
@@ -36,25 +37,30 @@
             <div class="row">
                <div class="col-lg-6 col-md-6 col-sm-6">
                   <div class="form-group">
-                     <input type="text" name="name" class="form-control" id="name" required data-error="Mohon lengkapi nama Anda" placeholder="Nama Lengkap">
+                     <input type="text" name="name" class="form-control" id="name" required
+                        data-error="Mohon lengkapi nama Anda" placeholder="Nama Lengkap">
                      <div class="help-block with-errors"></div>
                   </div>
                </div>
                <div class="col-lg-6 col-md-6 col-sm-6">
                   <div class="form-group">
-                     <input type="email" name="email" class="form-control" id="email" required data-error="Mohon lengkapi alamat email Anda" placeholder="Email">
+                     <input type="email" name="email" class="form-control" id="email" required
+                        data-error="Mohon lengkapi alamat email Anda" placeholder="Email">
                      <div class="help-block with-errors"></div>
                   </div>
                </div>
                <div class="col-lg-12 col-md-12 col-sm-12">
                   <div class="form-group">
-                     <input type="text" name="msg_subject" class="form-control" id="msg_subject" placeholder="Subjek" required data-error="Mohon isi subjek keterangan Anda">
+                     <input type="text" name="msg_subject" class="form-control" id="msg_subject" placeholder="Subjek"
+                        required data-error="Mohon isi subjek keterangan Anda">
                      <div class="help-block with-errors"></div>
                   </div>
                </div>
                <div class="col-lg-12 col-md-12 col-sm-12">
                   <div class="form-group">
-                     <textarea name="message" id="message" class="form-control" cols="30" rows="6" required data-error="Mohon isi pesan kebutuhan,keluhan, atau saran Anda" placeholder="Masukkan pesanmu di sini"></textarea>
+                     <textarea name="message" id="message" class="form-control" cols="30" rows="6" required
+                        data-error="Mohon isi pesan kebutuhan,keluhan, atau saran Anda"
+                        placeholder="Masukkan pesanmu di sini"></textarea>
                      <div class="help-block with-errors"></div>
                   </div>
                </div>
