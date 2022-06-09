@@ -31,42 +31,37 @@
          <p>Jika Anda mengalami kendala atau menemukan bug saat mengakses website dan aplikasi kami. Segera hubungi kontak kami melalui form atau kontak di bawah ini.</p>
       </div>
       <div class="contact-form">
-         <form id="contactForm">
+         <form action="{{ route('sendmessage') }}" method="post" autocomplete="off">
+            @csrf
             <div class="row">
                <div class="col-lg-6 col-md-6 col-sm-6">
                   <div class="form-group">
-                     <input type="text" name="name" class="form-control" id="name" required data-error="Please enter your name" placeholder="Eg: Sarah Taylor">
+                     <input type="text" name="name" class="form-control" id="name" required data-error="Mohon lengkapi nama Anda" placeholder="Nama Lengkap">
                      <div class="help-block with-errors"></div>
                   </div>
                </div>
                <div class="col-lg-6 col-md-6 col-sm-6">
                   <div class="form-group">
-                     <input type="email" name="email" class="form-control" id="email" required data-error="Please enter your email" placeholder="hello@sarah.com">
-                     <div class="help-block with-errors"></div>
-                  </div>
-               </div>
-               <div class="col-lg-6 col-md-6 col-sm-6">
-                  <div class="form-group">
-                     <input type="text" name="phone_number" class="form-control" id="phone_number" required data-error="Please enter your phone number" placeholder="Enter your phone number">
-                     <div class="help-block with-errors"></div>
-                  </div>
-               </div>
-               <div class="col-lg-6 col-md-6 col-sm-6">
-                  <div class="form-group">
-                     <input type="text" name="msg_subject" class="form-control" id="msg_subject" placeholder="Enter your subject" required data-error="Please enter your subject">
+                     <input type="email" name="email" class="form-control" id="email" required data-error="Mohon lengkapi alamat email Anda" placeholder="Email">
                      <div class="help-block with-errors"></div>
                   </div>
                </div>
                <div class="col-lg-12 col-md-12 col-sm-12">
                   <div class="form-group">
-                     <textarea name="message" id="message" class="form-control" cols="30" rows="6" required data-error="Please enter your message" placeholder="Enter message..."></textarea>
+                     <input type="text" name="msg_subject" class="form-control" id="msg_subject" placeholder="Subjek" required data-error="Mohon isi subjek keterangan Anda">
                      <div class="help-block with-errors"></div>
                   </div>
                </div>
                <div class="col-lg-12 col-md-12 col-sm-12">
-                  <button type="submit" class="default-btn"><i class='bx bx-paper-plane'></i> Send Message</button>
-                  <div id="msgSubmit" class="h3 text-center hidden"></div>
-                  <div class="clearfix"></div>
+                  <div class="form-group">
+                     <textarea name="message" id="message" class="form-control" cols="30" rows="6" required data-error="Mohon isi pesan kebutuhan,keluhan, atau saran Anda" placeholder="Masukkan pesanmu di sini"></textarea>
+                     <div class="help-block with-errors"></div>
+                  </div>
+               </div>
+               <div class="col-lg-12 col-md-12 col-sm-12">
+                  <button type="submit" class="default-btn">
+                     <i class='bx bx-paper-plane'></i> Send Message
+                  </button>
                </div>
             </div>
          </form>
@@ -86,8 +81,8 @@
                   <div class="icon bg1">
                      <i class="ri-customer-service-2-line"></i>
                   </div>
-                  <h3><a href="tel:(+321) 895-980 008">(+321) 895-980 008</a></h3>
-                  <h3><a href="tel:(+321) 895-980 008">(+321) 895-980 008</a></h3>
+                  <h3><a href="#">+62 82982123732</a></h3>
+                  <h3><a href="#">+62 82187298149</a></h3>
                </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -95,8 +90,8 @@
                   <div class="icon">
                      <i class="ri-earth-line"></i>
                   </div>
-                  <h3><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#dcb4b9b0b0b39cacbdb7bdacf2bfb3b1"><span class="__cf_email__" data-cfemail="38505d545457784859535948165b5755">[email&#160;protected]</span></a></h3>
-                  <h3><a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#d6bfb8b0b996a6b7bdb7a6f8b5b9bb"><span class="__cf_email__" data-cfemail="fb92959d94bb8b9a909a8bd5989496">[email&#160;protected]</span></a></h3>
+                  <h3><a href="#"><span class="__cf_email__">kakandasupport@gmail.com</span></a></h3>
+                  <h3><a href="#"><span class="__cf_email__">business@kakandatech.com</span></a></h3>
                </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -104,7 +99,7 @@
                   <div class="icon bg2">
                      <i class="ri-map-pin-line"></i>
                   </div>
-                  <h3>121 King St, Melbourne VIC 3000, Australia.</h3>
+                  <h3>Nangkaan, Kec. Bondowoso, Kabupaten Bondowoso.</h3>
                </div>
             </div>
          </div>
