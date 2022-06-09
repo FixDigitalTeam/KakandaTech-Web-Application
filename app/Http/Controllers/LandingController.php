@@ -98,6 +98,24 @@ class LandingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function sendmessage(Request $request)
+    {
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $subject = $request->input('msg_subject');
+        $message = $request->input('message');
+        $sendto = 'https://wa.me/6282140382483?text=';
+        $titlemessage = '*Hallo, Kakanda Tech!* %0A%0A';
+        $finalmessage = $sendto . $titlemessage . '*Pesan dari : ' . $name . '*; %0A' . '*Email : ' . $email . '*; %0A' . '*Subjek : ' . $subject . '*; %0A%0A' . '*Pesan :* %0A' . str_replace(' ', '%20', $message);
+
+        return redirect($finalmessage);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function contactus()
     {
         return view('pages.frontend.contact-us', [
