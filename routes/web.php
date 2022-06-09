@@ -31,6 +31,7 @@ Route::get('/mobile-development', [LandingController::class, 'mobiledevelopment'
 Route::get('/blog-data', [LandingController::class, 'blog'])->name('blog');
 Route::get('/blog/{slug}', [LandingController::class, 'blogdetail'])->name('blogdetail');
 Route::get('contact-us', [LandingController::class, 'contactus'])->name('contactus');
+Route::post('', [LandingController::class, 'sendmessage'])->name('sendmessage');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/verification/{id}', [CheckoutController::class, 'verification'])->name('verification');
