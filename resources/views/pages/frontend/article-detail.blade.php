@@ -6,7 +6,7 @@
       <div class="page-title-content">
          <h2>Blog Details</h2>
          <ul>
-            <li><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="{{ route('home') }}">Home</a></li>
             <li>Blog Details</li>
          </ul>
       </div>
@@ -32,14 +32,16 @@
             <div class="blog-details-desc">
                <h1 class="mb-4">{{ $data->title }}</h1>
                <div class="article-image">
-                  <a href="/" class="tag">Kakanda Tech</a>
+                  <a href="{{ route('home') }}" class="tag">Kakanda Tech</a>
                   <img src="{{ url('landing-assets/img/blog/blog1.jpg') }}" alt="blog-details">
                </div>
                <div class="article-content">
                   <div class="entry-meta">
                      <ul>
-                        <li><i class="ri-calendar-2-line"></i>{{ $data->created_at }}</li>
-                        <li><i class="ri-user-2-line"></i><a href="blog-grid.html">Kakanda Tech</a></li>
+                        <li><i class="ri-calendar-2-line"></i>{{
+                           \Carbon\Carbon::create($data->created_at)->toDateString()
+                           }}</li>
+                        <li><i class="ri-user-2-line"></i><a href="{{ route('home') }}">Kakanda Tech</a></li>
                      </ul>
                   </div>
                   <h1>{{ $data->title }}</h1>
@@ -50,8 +52,9 @@
                      <div class="d-flex align-items-center">
                         <img src="{{ url('landing-assets/img/user/user6.jpg') }}" alt="user">
                         <div class="title">
-                           <span class="name">By <a href="blog-grid.html">EnvyTheme</a></span>
-                           <span class="date">March 17, 2021</span>
+                           <span class="name">By <a href="{{ route('home') }}">KakandaTech</a></span>
+                           <span class="date">{{ \Carbon\Carbon::create($data->created_at)->toFormattedDateString()
+                              }}</span>
                         </div>
                      </div>
                   </div>
@@ -69,23 +72,25 @@
                   <h3 class="title">Related Post</h3>
                   <div class="row justify-content-center">
                      @foreach ($releatedpost as $getpost)
-                        <div class="col-lg-6 col-md-6">
-                           <div class="single-blog-post">
-                              <div class="image">
-                                 <a href="blog-details.html" class="d-block">
-                                    <img src="{{ url('landing-assets/img/blog/blog1.jpg') }}" alt="blog">
-                                 </a>
-                                 <a href="blog-grid.html" class="tag">Kakanda Tech</a>
-                              </div>
-                              <div class="content">
-                                 <ul class="meta">
-                                    <li><i class="ri-time-line"></i> {{ $getpost->created_at }}</li>
-                                    <li><i class="ri-user-2-line"></i> <a href="/"> Kakanda Tech</a></li>
-                                 </ul>
-                                 <h3><a href="/blog/{{ $getpost->slug }}">{{ $getpost->title }}</a></h3>
-                              </div>
+                     <div class="col-lg-6 col-md-6">
+                        <div class="single-blog-post">
+                           <div class="image">
+                              <a href="{{ url('/blog', $getpost->slug) }}" class="d-block">
+                                 <img src="{{ url('landing-assets/img/blog/blog1.jpg') }}" alt="blog">
+                              </a>
+                              <a href="{{ route('home') }}" class="tag">Kakanda Tech</a>
+                           </div>
+                           <div class="content">
+                              <ul class="meta">
+                                 <li><i class="ri-time-line"></i> {{
+                                    \Carbon\Carbon::create($getpost->created_at)->toDateString()
+                                    }}</li>
+                                 <li><i class="ri-user-2-line"></i> <a href="{{ route('home') }}"> Kakanda Tech</a></li>
+                              </ul>
+                              <h3><a href="{{ url('blog', $getpost->slug) }}">{{ $getpost->title }}</a></h3>
                            </div>
                         </div>
+                     </div>
                      @endforeach
                   </div>
                </div>
@@ -102,13 +107,16 @@
                <div class="widget widget_pakap_posts_thumb">
                   <h3 class="widget-title">Popular Posts</h3>
                   @foreach ($popularpost as $item)
-                     <article class="item">
-                        <a href="#" class="thumb"><span class="fullimage cover bg1" role="img"></span></a>
-                        <div class="info">
-                           <h4 class="title usmall"><a href="/blog/{{ $item->slug }}">{{ $item->title }}</a></h4>
-                           <span class="date"><i class="ri-calendar-2-fill"></i> {{ $item->created_at }}</span>
-                        </div>
-                     </article>
+                  <article class="item">
+                     <a href="{{ url('blog', $getpost->slug) }}" class="thumb"><span class="fullimage cover bg1"
+                           role="img"></span></a>
+                     <div class="info">
+                        <h4 class="title usmall"><a href="{{ url('blog', $getpost->slug) }}">{{ $item->title }}</a></h4>
+                        <span class="date"><i class="ri-calendar-2-fill"></i> {{
+                           \Carbon\Carbon::create($getpost->created_at)->toDateString()
+                           }}</span>
+                     </div>
+                  </article>
                   @endforeach
                </div>
             </aside>
