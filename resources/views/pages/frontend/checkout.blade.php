@@ -29,8 +29,10 @@
       <form action="{{ route('checkout') }}" method="post" autocomplete="off">
          @csrf
          <input type="hidden" value="{{ $package->id_package }}" name="id_package">
+         <input type="hidden" value="{{ $package->product->id_product }}" name="id_product">
          <input type="hidden" value="{{ $package->harga }}" name="payment_total">
-         <input type="hidden" value="{{ $currentdate->addDays($package->waktu_pengerjaan)->toDateString() }}" name="deadline">
+         <input type="hidden" value="{{ $currentdate->addDays($package->waktu_pengerjaan)->toDateString() }}"
+            name="deadline">
          <div class="row">
             <div class="col-lg-6 col-md-12">
                <div class="billing-details">
@@ -57,7 +59,8 @@
                      <div class="col-lg-12 col-md-12">
                         <div class="form-group">
                            <label>Konfirmasi Tanggal Pembelian <span class="required">*</span></label>
-                           <input type="text" class="form-control" value="{{ \Carbon\Carbon::now()->translatedFormat('l, d F Y') }}" readonly>
+                           <input type="text" class="form-control"
+                              value="{{ \Carbon\Carbon::now()->translatedFormat('l, d F Y') }}" readonly>
                         </div>
                      </div>
                   </div>

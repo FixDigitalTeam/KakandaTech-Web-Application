@@ -86,6 +86,10 @@
               <td style="width: 80%">{{ $mytransaction->user->name }}</td>
             </tr>
             <tr>
+              <td>Product</td>
+              <td>{{ $mytransaction->product->nama_product }}</td>
+            </tr>
+            <tr>
               <td>Package</td>
               <td>{{ $mytransaction->package->nama_package }}</td>
             </tr>

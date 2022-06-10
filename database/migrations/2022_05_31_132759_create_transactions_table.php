@@ -17,6 +17,8 @@ class CreateTransactionsTable extends Migration
             $table->increments('id_transaction');
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('id_product')->unsigned();
+            $table->foreign('id_product')->references('id_product')->on('products')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('id_package')->unsigned();
             $table->foreign('id_package')->references('id_package')->on('packages')->onDelete('cascade')->onUpdate('cascade');
             $table->string('phone_number', 13);

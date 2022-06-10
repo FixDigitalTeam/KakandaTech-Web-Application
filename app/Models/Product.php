@@ -20,4 +20,9 @@ class Product extends Model
     {
         return $this->hasMany(Package::class, 'id_product', 'id_product');
     }
+
+    public function product()
+    {
+        return $this->hasMany(Transaction::class, 'id_product', 'id_product');
+    }
 }
