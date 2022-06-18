@@ -32,6 +32,7 @@
             <option disabled>-----------------</option>
             <option value="On Working">On Working</option>
             <option value="Off Working">Off Working</option>
+            <option value="Completed">Completed</option>
           </select>
         </div>
         <div class="form-group">
