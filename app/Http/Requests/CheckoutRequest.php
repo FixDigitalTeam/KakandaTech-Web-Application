@@ -27,7 +27,7 @@ class CheckoutRequest extends FormRequest
         return [
             'id_package' => 'integer',
             'id_product' => 'integer',
-            'phone_number' => 'integer',
+            'phone_number' => 'string|max:13',
             'payment_total' => 'string'
         ];
     }
