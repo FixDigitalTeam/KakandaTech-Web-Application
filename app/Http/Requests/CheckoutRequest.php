@@ -27,7 +27,7 @@ class CheckoutRequest extends FormRequest
         return [
             'id_package' => 'integer',
             'id_product' => 'integer',
-            'phone_number' => 'required|max:13',
+            'phone_number' => 'integer',
             'payment_total' => 'string'
         ];
     }
@@ -36,7 +36,7 @@ class CheckoutRequest extends FormRequest
     {
         return [
             'phone_number.required' => 'Nomor telepon tidak boleh kosong',
-            'phone_number.max' => 'Nomor telepon tidak boleh lebih dari 13 angka'
+            'phone_number.max' => 'Nomor telepon tidak boleh lebih dari 13'
         ];
     }
 }
