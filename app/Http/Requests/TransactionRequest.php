@@ -27,7 +27,14 @@ class TransactionRequest extends FormRequest
         return [
             'payment_status' => 'required',
             'persentase' => 'required',
-            'process_desc' => 'required'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'payment_status.required' => 'Payment status cannot be empty',
+            'persentase.required' => 'Percentage cannot be empty'
         ];
     }
 }

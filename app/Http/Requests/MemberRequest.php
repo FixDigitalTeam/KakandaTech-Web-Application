@@ -28,4 +28,11 @@ class MemberRequest extends FormRequest
             'project_desc' => 'required'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'project_desc.required' => 'Project description cannot be empty'
+        ];
+    }
 }

@@ -30,4 +30,13 @@ class UserRequest extends FormRequest
             'roles' => 'required|string|max:255|in:USER,ADMIN',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.requred' => 'Name cannot be empty',
+            'email.required' => 'Email cannot be empty',
+            'roles.requred' => 'Roles cannot be empty'
+        ];
+    }
 }

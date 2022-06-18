@@ -26,7 +26,16 @@ class BlogRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:100',
-            'content' => 'required'
+            'content' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Content title cannot be empty',
+            'content.required' => 'Content cannot be empty',
+            'title.max' => 'Content title must not be greater than 100 character'
         ];
     }
 }
