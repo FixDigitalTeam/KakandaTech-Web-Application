@@ -283,7 +283,7 @@
                      @endif
                      <div class="title">
                         <h3>{{ $datas->name }}</h3>
-                        <span>{{ $datas->nama_product }}</span>
+                        <span>{{ $datas->nama_product }} <small>({{ $datas->nama_package }})</small></span>
                      </div>
                   </div>
                </div>
