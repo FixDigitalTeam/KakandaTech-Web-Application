@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\MemberRequest;
 use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
@@ -42,6 +44,29 @@ class MemberController extends Controller
     public function create()
     {
         //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function reviews(Request $request)
+    {
+        $getidtrx = $request->input('id_transaction');
+        if ($request->review == 'jangkrik' || $request->review == 'jelek' || $request->review == 'bodoh' || $request->review == 'tolol') {
+            echo '<h1>Ndak boleh itu</h1>';
+            return redirect()->route('dashboard.mytransaction.show', $getidtrx)->with('error', 'Gagal menambah review karena mengandung kata-kata yang tidak diperbolehkan!!!');
+        }
+        else {
+            Review::insert([
+                'id_transaction' => $request->id_transaction,
+                'rate' => $request->rate,
+                'review' => $request->review
+            ]);
+        }
+        DB::table('transactions')->where('id_transaction', $getidtrx)->update(['token_review' => 0]);
+        return redirect()->route('dashboard.mytransaction.show', $getidtrx);
     }
 
     /**
