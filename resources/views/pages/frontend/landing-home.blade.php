@@ -38,7 +38,7 @@
          </div>
          <div class="col-lg-4 col-md-12">
             <div class="main-banner-image" data-aos="fade-up" data-aos-duration="2000">
-               <img src="{{ url('landing-assets/img/banner/banner-app1.png') }}" alt="image">
+               <img src="{{ url('landing-assets/img/banner/banner-kakandatech.png') }}" alt="image">
             </div>
          </div>
       </div>
@@ -207,8 +207,12 @@
 <!-- End App Progress Area -->
 
 <!-- Start App Download Area -->
-<div class="app-download-area">
+<div class="app-download-area mt-5">
    <div class="container">
+      <div class="section-title">
+         <span class="sub-title">DOWNLOAD APP</span>
+         <h2>Satu Langkah Praktis dengan Aplikasi Mobile KakandaTECH</h2>
+      </div>
       <div class="app-download-inner">
          <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
@@ -248,7 +252,7 @@
 </div>
 <!-- End App Download Area -->
 
-<!-- Start Screenshots Area -->
+{{-- <!-- Start Screenshots Area -->
 <div class="screenshots-area bg-color ptb-100">
    <div class="container">
       <div class="section-title">
@@ -277,7 +281,7 @@
       </div>
    </div>
 </div>
-<!-- End Screenshots Area -->
+<!-- End Screenshots Area --> --}}
 
 <!-- Start Feedback Area -->
 <div class="feedback-area ptb-100">
@@ -287,98 +291,52 @@
          <h2>Kata Mereka Tentang Kami</h2>
       </div>
       <div class="feedback-slides owl-carousel owl-theme">
-         <div class="single-feedback-box">
-            <div class="client-info">
-               <div class="d-flex align-items-center">
-                  <img src="{{ url('landing-assets/img/user/user1.jpg') }}" alt="user">
-                  <div class="title">
-                     <h3>Deanna Hodges</h3>
-                     <span>Spotify Developer</span>
+         @foreach ($datareview as $datas)
+            <div class="single-feedback-box">
+               <div class="client-info">
+                  <div class="d-flex align-items-center">
+                     @if ($datas->nama_product == 'Content Writing')
+                        <img src="{{ url('landing-assets/img/user/firstuser.jpg') }}" alt="user">
+                     @elseif ($datas->nama_product == 'Website Development')
+                        <img src="{{ url('landing-assets/img/user/seconduser.jpg') }}" alt="user">
+                     @elseif ($datas->nama_product == 'Mobile Development')
+                        <img src="{{ url('landing-assets/img/user/thirduser.jpg') }}" alt="user">
+                     @endif
+                     <div class="title">
+                        <h3>{{ $datas->name }}</h3>
+                        <span>{{ $datas->nama_product }}</span>
+                     </div>
+                  </div>
+               </div>
+               <p>{{ $datas->review }}</p>
+               <div class="rating d-flex align-items-center justify-content-between">
+                  <h5>Service Quality</h5>
+                  <div>
+                     @if ($datas->rate == 1)
+                        <i class="ri-star-fill"></i>
+                     @elseif ($datas->rate == 2)
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     @elseif ($datas->rate == 3)
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     @elseif ($datas->rate == 4)
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     @elseif ($datas->rate == 5)
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     @endif
                   </div>
                </div>
             </div>
-            <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."</p>
-            <div class="rating d-flex align-items-center justify-content-between">
-               <h5>Theme Customization</h5>
-               <div>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-               </div>
-            </div>
-         </div>
-         <div class="single-feedback-box">
-            <div class="client-info">
-               <div class="d-flex align-items-center">
-                  <img src="{{ url('landing-assets/img/user/user2.jpg') }}" alt="user">
-                  <div class="title">
-                     <h3>Londynn Vargas</h3>
-                     <span>PHP Developer</span>
-                  </div>
-               </div>
-            </div>
-            <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."</p>
-            <div class="rating d-flex align-items-center justify-content-between">
-               <h5>Customer Support</h5>
-               <div>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-               </div>
-            </div>
-         </div>
-         <div class="single-feedback-box">
-            <div class="client-info">
-               <div class="d-flex align-items-center">
-                  <img src="{{ url('landing-assets/img/user/user3.jpg') }}" alt="user">
-                  <div class="title">
-                     <h3>James Andy</h3>
-                     <span>Moodle Developer</span>
-                  </div>
-               </div>
-            </div>
-            <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."</p>
-            <div class="rating d-flex align-items-center justify-content-between">
-               <h5>Responsive Design</h5>
-               <div>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-line"></i>
-               </div>
-            </div>
-         </div>
-         <div class="single-feedback-box">
-            <div class="client-info">
-               <div class="d-flex align-items-center">
-                  <img src="{{ url('landing-assets/img/user/user4.jpg') }}" alt="user">
-                  <div class="title">
-                     <h3>David Warner</h3>
-                     <span>Python Developer</span>
-                  </div>
-               </div>
-            </div>
-            <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."</p>
-            <div class="rating d-flex align-items-center justify-content-between">
-               <h5>Design Quality</h5>
-               <div>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-half-line"></i>
-               </div>
-            </div>
-         </div>
+         @endforeach
       </div>
    </div>
 </div>
