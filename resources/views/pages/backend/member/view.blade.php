@@ -70,6 +70,12 @@
   </div>
   @endif
 
+  @if ($mytransaction->payment_status == 'Pending')
+    <div class="alert alert-danger" role="alert">
+      Pembayaran Anda masih tertunda (pending). Silakan klik di <a href="{{ $mytransaction->payment_url }}" target="_blank"><strong>sini</strong></a> untuk melanjutkan pembayaran Anda!
+    </div>
+  @endif
+
   <!-- Page Heading -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
