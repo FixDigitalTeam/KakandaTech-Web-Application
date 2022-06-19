@@ -53,7 +53,7 @@
                      <div class="col-lg-12 col-md-12">
                         <div class="form-group">
                            <label>Konfirmasi Nomor Handphone <span class="required">*</span></label>
-                           <input type="text" class="form-control" name="phone_number" maxlength="13" autofocus>
+                           <input type="text" class="form-control" name="phone_number" maxlength="13" oninput="this.value=this.value.replace(/[^0-9]/, '')" autofocus>
                         </div>
                      </div>
                      <div class="col-lg-12 col-md-12">
