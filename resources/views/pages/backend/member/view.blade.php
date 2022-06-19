@@ -23,9 +23,7 @@
         @method('PUT')
         <div class="form-group">
           <label for="project_desc" class="form-label">Project Description</label>
-          <textarea class="form-control" name="project_desc" id="project_desc">
-            {!! old('project_desc') ?? $mytransaction->project_desc !!}
-          </textarea>
+          <textarea class="form-control" name="project_desc" id="project_desc" rows="6" autofocus>{!! old('project_desc') ?? $mytransaction->project_desc !!}</textarea>
         </div>
         <button type="submit" class="btn btn-primary float-right">Submit</button>
       </form>
@@ -33,6 +31,44 @@
   </div>
   @endif
 
+  @if ($mytransaction->working_status == 'Completed' and $mytransaction->token_review == 1)
+  <div class="alert alert-success" role="alert">
+    Your project has been completed. Please leave your best review for us!
+  </div>
+  <!-- Page Heading -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Review</h6>
+    </div>
+    <div class="card-body">
+      @if (session('error'))
+        <div class="alert alert-danger" role="alert">
+          {{ session('error') }}
+        </div>
+      @endif
+      <form action="{{ route('dashboard.reviews') }}" method="POST">
+        @csrf
+        <input type="hidden" class="form-control" name="id_transaction" value="{{ $mytransaction->id_transaction }}">
+        <div class="form-group">
+          <label for="rate" class="form-label">Rating</label>
+          <select name="rate" class="custom-select" required>
+            <option value="">- Pilih Rating -</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Star</option>
+            <option value="3">3 Star</option>
+            <option value="4">4 Star</option>
+            <option value="5">5 Star</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="review" class="form-label">Your Review</label>
+          <textarea class="form-control" name="review" id="review" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary float-right">Kirim</button>
+      </form>
+    </div>
+  </div>
+  @endif
 
   <!-- Page Heading -->
   <div class="card shadow mb-4">
