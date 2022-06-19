@@ -108,7 +108,8 @@
    <!-- Link of JS files -->
    <script src="{{ url('landing-assets/js/jquery.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/bootstrap.bundle.min.js') }}"></script>
-   <script src="{{ url('landing-assets/alerts/sweetalert2.all.min.js') }}"></script>
+   {{-- <script src="{{ url('landing-assets/alerts/sweetalert2.all.min.js') }}"></script> --}}
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    <script src="{{ url('landing-assets/js/owl.carousel.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/swiper-bundle.min.js') }}"></script>
    <script src="{{ url('landing-assets/js/magnific-popup.min.js') }}"></script>
