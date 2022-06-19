@@ -31,6 +31,7 @@ class CreateTransactionsTable extends Migration
             $table->string('working_status', 20)->default('Off Working');
             $table->string('persentase', 5)->default('0%');
             $table->text('process_desc')->nullable();
+            $table->integer('token_review')->default(1);
             $table->timestamps();
         });
     }
