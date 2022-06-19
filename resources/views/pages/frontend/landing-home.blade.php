@@ -202,7 +202,7 @@
                   <h2>Pantau Progres Pengerjaan Lebih Mudah dan Praktis</h2>
                   <p>Dengan menggunakan aplikasi mobile KakandaTech Anda dapat memantau progress project Anda jadi jauh lebih mudah dan praktis.</p>
                   <div class="btn-box">
-                     <a href="#" class="playstore-btn" target="_blank">
+                     <a href="{{ url('https://play.google.com/store/apps/details?id=com.azril.kakanda_tech') }}" class="playstore-btn" target="_blank">
                         <img src="{{ url('landing-assets/img/play-store.png') }}" alt="image">
                         Dapatkan Segera
                         <span>Google Play</span>
