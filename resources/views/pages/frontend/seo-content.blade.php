@@ -27,7 +27,7 @@
 <div class="features-area pt-100">
    <div class="container">
       <div class="section-title">
-         <span class="sub-title">KEUNGGULAN KONTEN SEO KAMI</span>
+         <span class="sub-title">KEUNGGULAN JASA PENULISAN ARTIKEL SEO KAMI</span>
          <h2>Mengapa Harus Jasa Penulisan Artikel Kakanda Tech?</h2>
       </div>
       <div class="row justify-content-center">
@@ -37,7 +37,7 @@
                   <i class="ri-eye-line"></i>
                </div>
                <h3>Human Friendly & SEO Friendly</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
+               <p>Jasa penulis artikel kami SEO & human friendly sehingga website Anda mudah ditemukan di mesin pencari dan artikel menarik untuk dibaca.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -46,7 +46,7 @@
                   <i class="ri-stack-line"></i>
                </div>
                <h3>Harga Murah Kualitas Terjamin</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
+               <p>Kami menawarkan layanan penulis artikel dengan harga yang murah sehingga Anda dapat menghemat kantong.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -55,7 +55,7 @@
                   <i class="ri-leaf-line"></i>
                </div>
                <h3>Gratis Revisi Sepuasnya</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
+               <p>Jasa penulis artikel kami memberikan garansi revisi hingga klien puas. Karena bagi kami, klien adalah raja.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -64,7 +64,7 @@
                   <i class="ri-secure-payment-line"></i>
                </div>
                <h3>Optimasi Keyword</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
+               <p>Kami akan mengoptimasi longtail keyword pada artikel Anda supaya artikel bisa mendapatkan peringkat tinggi di berbagai kata kunci.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -73,7 +73,7 @@
                   <i class="ri-cloud-line"></i>
                </div>
                <h3>Original, Tanpa Copas</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
+               <p>Kami menulis artikel mengetik manual. Kami tidak menggunakan tools untuk rewrite. Jadi, tidak usah khawatir terkait originalitas artikel.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -82,7 +82,7 @@
                   <i class="ri-pie-chart-2-line"></i>
                </div>
                <h3>Konsultasi SEO</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
+               <p>Anda bisa berkonsultasi terkait SEO dengan kami. Apabila ada kendala terkait SEO, silakan diskusikan bersama kami.</p>
             </div>
          </div>
       </div>

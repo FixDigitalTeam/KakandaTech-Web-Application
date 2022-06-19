@@ -14,21 +14,21 @@
                <div class="trusted-by">
                   <div class="row align-items-center">
                      <div class="col-lg-2 col-md-12">
-                        <span class="title">Trusted by:</span>
+                        <span class="title">Support by:</span>
                      </div>
                      <div class="col-lg-10 col-md-12">
                         <div class="trusted-by-slides owl-carousel owl-theme">
                            <div class="item">
-                              <img src="{{ url('landing-assets/img/partner/partner1.png') }}" alt="partner">
+                              <img src="{{ url('landing-assets/img/partner/navbar-brand.png') }}" alt="partner">
                            </div>
                            <div class="item">
-                              <img src="{{ url('landing-assets/img/partner/partner2.png') }}" alt="partner">
+                              <img src="{{ url('landing-assets/img/partner/logo-gabung-putih-p5s2qybll9rxhbt9p5sy1h36opw2w5z573n8s3dxxc.png') }}" alt="partner">
                            </div>
                            <div class="item">
-                              <img src="{{ url('landing-assets/img/partner/partner3.png') }}" alt="partner">
+                              <img src="{{ url('landing-assets/img/partner/Laravel_logo_wordmark_logotype.png') }}" alt="partner">
                            </div>
                            <div class="item">
-                              <img src="{{ url('landing-assets/img/partner/partner4.png') }}" alt="partner">
+                              <img src="{{ url('landing-assets/img/partner/Google-flutter-logo.png') }}" alt="partner">
                            </div>
                         </div>
                      </div>
@@ -76,8 +76,7 @@
                   <i class="ri-eye-line"></i>
                </div>
                <h3>Efisien</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Jangan khawatir kami selalu melakukan pekerjaan dengan tepat waktu, dan cermat sesuai ketentuan waktu yang telah disepakati.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -86,8 +85,7 @@
                   <i class="ri-stack-line"></i>
                </div>
                <h3>Bertanggung Jawab</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Jika terjadi masalah, kami siap bertanggung jawab penuh  atas kesalahan tersebut.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -96,8 +94,7 @@
                   <i class="ri-leaf-line"></i>
                </div>
                <h3>Dedikasi Tinggi</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Kami siap mengorbankan tenaga, pikiran, dan waktu demi keberhasilan membangun  website yang anda inginkan.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -106,8 +103,7 @@
                   <i class="ri-secure-payment-line"></i>
                </div>
                <h3>Harga Terjangkau</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Kami menyediakan jasa digital dengan harga terjangkau dan paling murah di Indonesia.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -116,8 +112,7 @@
                   <i class="ri-cloud-line"></i>
                </div>
                <h3>Cepat, Tepat, Hemat</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Proses pembuatan website cepat, Anda tidak perlu menunggu lama!</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -126,8 +121,7 @@
                   <i class="ri-pie-chart-2-line"></i>
                </div>
                <h3>Profesional Team</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Tim professional Kakanda Tech siap membantu anda pada  setiap masalah yang ada.</p>
             </div>
          </div>
       </div>
@@ -152,12 +146,7 @@
             <div class="app-progress-content">
                <span class="sub-title">CONTENT WRITING</span>
                <h2>Buat Konten Berkualitas dengan Skor SEO Terbaik</h2>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi vero non atque, libero
-                  aut est neque inventore omnis soluta, distinctio ipsum illum accusantium, ratione itaque iste quod.
-                  Natus. Lorem ipsum dolor.</p>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi vero non atque, libero
-                  aut est neque inventore omnis soluta, distinctio ipsum illum accusantium, ratione itaque iste quod.
-                  Natus. Lorem ipsum dolor.</p>
+               <p>Jasa SEO Content Writer | Kakanda Tech adalah layanan jasa SEO content writer yang berpengalaman yang dapat membuat artikel SEO untuk situs web kamu. Kami memiliki tim jasa seo content writer dari berbagai latar belakang, jadi kami selalu siap membantu kamu membuat artikel berkualitas tinggi dan SEO friendly yang mudah & enak untuk dibaca.</p>
                <a href="{{ route('seocontent') }}" class="default-btn">Detail Product</a>
             </div>
          </div>
@@ -167,12 +156,8 @@
             <div class="app-progress-content">
                <span class="sub-title">WEB DEVELOPMENT</span>
                <h2>Lebih Modern dengan Sistem Informasi Berbasis Website</h2>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi vero non atque, libero
-                  aut est neque inventore omnis soluta, distinctio ipsum illum accusantium, ratione itaque iste quod.
-                  Natus. Lorem ipsum dolor.</p>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi vero non atque, libero
-                  aut est neque inventore omnis soluta, distinctio ipsum illum accusantium, ratione itaque iste quod.
-                  Natus. Lorem ipsum dolor.</p>
+               <p>Kami menawarkan jasa pembuatan aplikasi berbasis web dan software custom sesuai kebutuhan bisnis dan transformasi digital. Perubahan sistem dari metode konvensional menjadi digital akan mengefisienkan waktu, biaya dan tenaga.</p>
+               <p>Kami juga membuka jasa pembuatan aplikasi berbasis web dan pembuatan software custom di Indonesia. Tim praktisi kami juga melayani pengembangan atau pemutakhiran aplikasi yang telah ada saat ini, untuk meningkatkan performa dan kualitas produk.</p>
                <a href="{{ route('webdevelopment') }}" class="default-btn">Detail Product</a>
             </div>
          </div>
@@ -192,12 +177,8 @@
             <div class="app-progress-content">
                <span class="sub-title">MOBILE DEVELOPMENT</span>
                <h2>Buat Langkahmu Lebih Mudah dengan Aplikasi Mobile</h2>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi vero non atque, libero
-                  aut est neque inventore omnis soluta, distinctio ipsum illum accusantium, ratione itaque iste quod.
-                  Natus. Lorem ipsum dolor.</p>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi vero non atque, libero
-                  aut est neque inventore omnis soluta, distinctio ipsum illum accusantium, ratione itaque iste quod.
-                  Natus. Lorem ipsum dolor.</p>
+               <p>Kami menawarkan jasa pembuatan aplikasi mobile terbaik dengan menitikberatkan pada proses pengembangan aplikasi secara custom. Serta berfokus pada peluncuran aplikasi dengan tampilan UI menarik dan UX yang mendukung dengan proses integrasi backend system.</p>
+               <p>Untuk produk layanan kami mencakup berbagai platform seperti Android, IOS, dan React Native. Kami berfokus pada sisi fungsionalitas dari segi User Interface (UI) dan User Experience (UX) aplikasi tersebut.</p>
                <a href="{{ route('mobiledevelopment') }}" class="default-btn">Detail Product</a>
             </div>
          </div>
@@ -217,15 +198,13 @@
          <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                <div class="app-download-content">
-                  <span class="sub-title">DOWNLOAD K-TECH APP</span>
+                  <span class="sub-title">DOWNLOAD KAKANDATECH APP</span>
                   <h2>Pantau Progres Pengerjaan Lebih Mudah dan Praktis</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe similique laborum consequuntur
-                     laboriosam ullam dolore fuga eum quidem alias sequi eveniet nostrum, nisi quaerat magnam eligendi
-                     debitis quos.</p>
+                  <p>Dengan menggunakan aplikasi mobile KakandaTech Anda dapat memantau progress project Anda jadi jauh lebih mudah dan praktis.</p>
                   <div class="btn-box">
                      <a href="#" class="playstore-btn" target="_blank">
                         <img src="{{ url('landing-assets/img/play-store.png') }}" alt="image">
-                        Get It On
+                        Dapatkan Segera
                         <span>Google Play</span>
                      </a>
                   </div>

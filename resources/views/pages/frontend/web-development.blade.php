@@ -37,8 +37,7 @@
                   <i class="ri-eye-line"></i>
                </div>
                <h3>SEO Friendly</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Solusi tepat bagi Anda yang ingin mempunyai website yang siap bersaing di peringkat teratas pencarian.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -47,8 +46,7 @@
                   <i class="ri-stack-line"></i>
                </div>
                <h3>Harga Murah</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Dapatkan website dengan kualitas terbaik dengan harga terjangkau hanya dari jasa pembuatan website kami.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -57,8 +55,7 @@
                   <i class="ri-leaf-line"></i>
                </div>
                <h3>Responsive</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Kami siap membangun website full responsive agar dapat diakses menggunakan aplikasi mobile para pengguna.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -67,8 +64,7 @@
                   <i class="ri-secure-payment-line"></i>
                </div>
                <h3>Gratis Maintenance</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Mengalami kendala atau masalah? Kami siap memberikan maintenance gratis kepada para pelanggan tercinta kami.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -77,8 +73,7 @@
                   <i class="ri-cloud-line"></i>
                </div>
                <h3>Hosting dan Domain</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem
-                  dolorum.</p>
+               <p>Ingin website langsung online dan bisa diakses? Kami siap menerima upload hosting dan domain untuk website Anda.</p>
             </div>
          </div>
          <div class="col-xl-4 col-lg-6 col-sm-6 col-md-6">
@@ -87,7 +82,7 @@
                   <i class="ri-pie-chart-2-line"></i>
                </div>
                <h3>Sesuai Keinginan</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing. Mollitia nobis maxime ratione saepe eaque dolorem dolorum.</p>
+               <p>Ingin memiliki website dengan desain dan fitur yang keren? Kami selalu siap memanjakan para pelanggan sesuai dengan keinginan mereka.</p>
             </div>
          </div>
       </div>
