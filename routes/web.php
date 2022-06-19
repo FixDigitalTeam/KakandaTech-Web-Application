@@ -41,6 +41,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::middleware(['auth', 'verified'])->name('dashboard.')->prefix('dashboard')->group(function () {
 
     Route::resource('mytransaction', MemberController::class);
+    Route::post('/review', [MemberController::class, 'reviews'])->name('reviews');
     
     // Route admin
     Route::middleware(['admin'])->group(function () {
