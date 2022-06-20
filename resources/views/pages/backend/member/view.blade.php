@@ -70,10 +70,16 @@
   </div>
   @endif
 
-  @if ($mytransaction->payment_status == 'Pending')
+  @if ($maxtrx >= 4)
     <div class="alert alert-danger" role="alert">
-      Pembayaran Anda masih tertunda (pending). Silakan klik di <a href="{{ $mytransaction->payment_url }}" target="_blank"><strong>sini</strong></a> untuk melanjutkan pembayaran Anda!
+      Pembayaran Anda masih tertunda (pending). Namun untuk saat ini Anda tidak melanjutkan pembayaran karena jumlah orderan melebihi batas!
     </div>
+  @else
+    @if ($mytransaction->payment_status == 'Pending')
+      <div class="alert alert-danger" role="alert">
+        Pembayaran Anda masih tertunda (pending). Silakan klik di <a href="{{ $mytransaction->payment_url }}" target="_blank"><strong>sini</strong></a> untuk melanjutkan pembayaran Anda!
+      </div>
+    @endif
   @endif
 
   <!-- Page Heading -->
@@ -141,7 +147,15 @@
             </tr>
             <tr>
               <td>Payment Link</td>
-              <td>{{ $mytransaction->payment_url }}</td>
+              <td>
+                @if ($maxtrx >= 4)
+                  <div class="alert alert-danger" role="alert">
+                    Pembayaran Anda masih tertunda (pending). Namun untuk saat ini Anda tidak melanjutkan pembayaran karena jumlah orderan melebihi batas!
+                  </div>
+                @else
+                  {{ $mytransaction->payment_url }}
+                @endif
+              </td>
             </tr>
             <tr>
               <td>Payment Total</td>

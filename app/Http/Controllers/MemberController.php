@@ -88,9 +88,11 @@ class MemberController extends Controller
      */
     public function show(Transaction $mytransaction)
     {
+        $maxtrx = DB::table('transactions')->select('*')->where('payment_status', 'Success')->where('working_status', 'On Working')->count();
         return view('pages.backend.member.view', [
             'head' => 'My Transaction',
-            'mytransaction' => $mytransaction
+            'mytransaction' => $mytransaction,
+            'maxtrx' => $maxtrx
         ]);
     }
 
